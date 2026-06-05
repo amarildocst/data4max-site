@@ -89,3 +89,23 @@ footer {
   .section { margin: 5px; padding: 15px; }
   nav a { font-size: 0.9em; }
 }
+#mensagemConfirmacao {
+  display: none;              /* começa oculto */
+  text-align: center;         /* centraliza o texto */
+  margin-top: 20px;           /* espaço acima */
+  padding: 20px;              /* espaço interno */
+  border: 2px solid #4CAF50;  /* borda verde */
+  border-radius: 8px;         /* cantos arredondados */
+  background-color: #f9fff9;  /* fundo suave */
+  color: #333;                /* cor do texto */
+}
+
+#mensagemConfirmacao h2 {
+  color: #4CAF50;             /* título em verde */
+  margin-bottom: 10px;
+}
+
+#mensagemConfirmacao p {
+  margin: 8px 0;
+  font-size: 16px;
+}
