@@ -1,1 +1,91 @@
-
+body {
+  font-family: Arial, sans-serif;
+  margin: 0; padding: 0;
+  background-color: #F5F5F5;
+  color: #1E3A5F;
+}
+header {
+  background-color: #1E3A5F;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+nav {
+  background-color: #2E8B57;
+  padding: 10px;
+  text-align: center;
+}
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.banner {
+  background-color: #FFD966;
+  padding: 40px;
+  text-align: center;
+}
+.banner h1 {
+  margin: 0;
+  font-size: 2.2em;
+}
+.section {
+  padding: 30px;
+  background-color: white;
+  margin: 20px;
+  border-radius: 8px;
+}
+.section h2 {
+  color: #2E8B57;
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+}
+.section h2 span {
+  margin-right: 10px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+form input, form select, form button {
+  margin-top: 10px;
+  padding: 10px;
+}
+form button {
+  background-color: #2E8B57;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#mensagemConfirmacao {
+  display: none;
+  background-color: #E6FFE6;
+  border: 1px solid #2E8B57;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+footer {
+  background-color: #1E3A5F;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+@media (max-width: 768px) {
+  nav { display: flex; flex-direction: column; }
+  nav a { margin: 8px 0; }
+  .banner h1 { font-size: 1.8em; }
+  .section { margin: 10px; padding: 20px; }
+  .section h2 { font-size: 1.2em; }
+}
+@media (max-width: 480px) {
+  .banner { padding: 20px; }
+  .banner h1 { font-size: 1.5em; }
+  .section { margin: 5px; padding: 15px; }
+  nav a { font-size: 0.9em; }
+}
