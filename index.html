@@ -65,13 +65,13 @@
     <h2><span>📝</span>Inscrição nas Oficinas</h2>
     <form id="formInscricao">
       <label>Nome completo:</label>
-      <input type="text" id="nome" required><br><br>
+      <input type="text" id="nome" name="nome" required><br><br>
 
       <label>E-mail:</label>
-      <input type="email" id="email" required><br><br>
+      <input type="email" id="email" name="email" required><br><br>
 
       <label>Área de interesse:</label>
-      <select id="interesse" required><br><br>
+      <select id="interesse" name="interesse" required>
         <option value="">Selecione...</option>
         <option value="fiscal">Obrigações fiscais</option>
         <option value="digital">Ferramentas digitais</option>
@@ -80,9 +80,9 @@
       </select>
 
       <label>
-        <input type="checkbox" id="consentimento" required><br><br>
+        <input type="checkbox" id="consentimento" name="consentimento" value="Aceito" required>
         Declaro que li e concordo com o uso dos meus dados pessoais conforme a LGPD.
-      </label>
+      </label><br><br>
 
       <button type="submit">Enviar inscrição</button>
     </form>
