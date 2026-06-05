@@ -1,87 +1,17 @@
   <!-- Aqui vai o conteúdo da página -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Contabilidade Ética e Reforma Tributária</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-  <!DOCTYPE html>
-  <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8">
-    <title>Contabilidade Ética e Reforma Tributária</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0; padding: 0;
-        background-color: #F5F5F5;
-        color: #1E3A5F;
-      }
-      header {
-        background-color: #1E3A5F;
-        color: white;
-        padding: 15px;
-        text-align: center;
-      }
-      nav {
-        background-color: #2E8B57;
-        padding: 10px;
-        text-align: center;
-      }
-      nav a {
-        color: white;
-        margin: 0 15px;
-        text-decoration: none;
-        font-weight: bold;
-        display: inline-block;
-      }
-      .banner {
-        background-color: #FFD966;
-        padding: 40px;
-        text-align: center;
-      }
-      .banner h1 {
-        margin: 0;
-        font-size: 2.2em;
-      }
-      .section {
-        padding: 30px;
-        background-color: white;
-        margin: 20px;
-        border-radius: 8px;
-      }
-      .section h2 {
-        color: #2E8B57;
-        display: flex;
-        align-items: center;
-        font-size: 1.5em;
-      }
-      .section h2 span {
-        margin-right: 10px;
-      }
-      footer {
-        background-color: #1E3A5F;
-        color: white;
-        text-align: center;
-        padding: 15px;
-        margin-top: 30px;
-      }
-      @media (max-width: 768px) {
-        nav { display: flex; flex-direction: column; }
-        nav a { margin: 8px 0; }
-        .banner h1 { font-size: 1.8em; }
-        .section { margin: 10px; padding: 20px; }
-        .section h2 { font-size: 1.2em; }
-      }
-      @media (max-width: 480px) {
-        .banner { padding: 20px; }
-        .banner h1 { font-size: 1.5em; }
-        .section { margin: 5px; padding: 15px; }
-        nav a { font-size: 0.9em; }
-      }
-    </style>
-  </head>
-  <body>
-  
   <header>
     <h2>Projeto de Extensão</h2>
   </header>
-  
+
   <nav>
     <a href="#sobre">📘 Sobre</a>
     <a href="#conteudos">📑 Conteúdos</a>
@@ -91,17 +21,17 @@
     <a href="#atendimento">💬 Atendimento</a>
     <a href="#academico">🎓 Acadêmico</a>
   </nav>
-  
+
   <div class="banner">
     <h1>Contabilidade Ética e Reforma Tributária</h1>
     <p>Capacitação comunitária para pequenos empreendedores</p>
   </div>
-  
+
   <div class="section" id="sobre">
     <h2><span>📘</span>Sobre o Projeto</h2>
     <p>Este projeto busca reduzir barreiras da reforma tributária de 2026, promovendo inclusão socioeconômica e cidadania fiscal.</p>
   </div>
-  
+
   <div class="section" id="conteudos">
     <h2><span>📑</span>Conteúdos Informativos</h2>
     <ul>
@@ -112,7 +42,7 @@
       <li>Cidadania fiscal e credibilidade empresarial.</li>
     </ul>
   </div>
-  
+
   <div class="section" id="materiais">
     <h2><span>🎥</span>Materiais Didáticos</h2>
     <ul>
@@ -121,7 +51,7 @@
       <li>Infográficos resumidos.</li>
     </ul>
   </div>
-  
+
   <div class="section" id="agenda">
     <h2><span>📅</span>Agenda de Oficinas</h2>
     <ul>
@@ -130,14 +60,16 @@
       <li>Inscreva-se gratuitamente pelo formulário abaixo.</li>
     </ul>
   </div>
-  
+
   <div class="section" id="inscricao">
     <h2><span>📝</span>Inscrição nas Oficinas</h2>
-    <form id="formInscricao" style="display:flex; flex-direction:column; max-width:500px;">
+    <form id="formInscricao">
       <label>Nome completo:</label>
       <input type="text" id="nome" required>
+
       <label>E-mail:</label>
       <input type="email" id="email" required>
+
       <label>Área de interesse:</label>
       <select id="interesse" required>
         <option value="">Selecione...</option>
@@ -146,57 +78,40 @@
         <option value="financeira">Educação financeira</option>
         <option value="ética">Ética profissional</option>
       </select>
+
       <label>
         <input type="checkbox" id="consentimento" required>
         Declaro que li e concordo com o uso dos meus dados pessoais conforme a LGPD.
       </label>
-      <button type="submit" style="margin-top:15px; padding:10px; background-color:#2E8B57; color:white; border:none; border-radius:5px; cursor:pointer;">
-        Enviar inscrição
-      </button>
+
+      <button type="submit">Enviar inscrição</button>
     </form>
-    <div id="mensagemConfirmacao" style="display:none; background-color:#E6FFE6; border:1px solid #2E8B57; padding:20px; border-radius:8px; margin-top:20px;">
+
+    <div id="mensagemConfirmacao">
       <h2><span>✅</span> Inscrição Confirmada</h2>
       <p>Obrigado por se inscrever! Seus dados foram recebidos com sucesso.</p>
       <p>Conforme a LGPD, suas informações serão utilizadas exclusivamente para inscrição e comunicação sobre as atividades do projeto.</p>
     </div>
   </div>
-  
+
   <div class="section" id="atendimento">
     <h2><span>💬</span>Canal de Atendimento</h2>
     <p>Utilize nosso formulário de contato ou chat online para suporte.</p>
   </div>
-  
+
   <div class="section" id="academico">
     <h2><span>🎓</span>Área Acadêmica</h2>
     <p>Espaço para relatórios reflexivos e publicação de resultados.</p>
   </div>
-  
+
   <footer>
     <p>© 2026 Projeto de Extensão - Universidade Parceira</p>
   </footer>
-  
-  <script>
-    const scriptURL = "COLE_AQUI_A_URL_DO_WEBAPP"; // URL do Google Apps Script
-    const form = document.getElementById("formInscricao");
-    form.addEventListener("submit", e => {
-      e.preventDefault();
-      const data = {
-        nome: document.getElementById("nome").value,
-        email: document.getElementById("email").value,
-        interesse: document.getElementById("interesse").value,
-        consentimento: document.getElementById("consentimento").checked ? "Aceito" : "Não aceito"
-      };
-      fetch(scriptURL, { method: "POST", body: JSON.stringify(data) })
-        .then(response => {
-          form.style.display = "none";
-          document.getElementById("mensagemConfirmacao").style.display = "block";
-        })
-        .catch(error => alert("Erro ao enviar inscrição: " + error));
-    });
-  </script>
-  
-  </body>
-  </html>
-  
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+ 
 
 
