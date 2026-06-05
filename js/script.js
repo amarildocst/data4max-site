@@ -1,4 +1,4 @@
-const scriptURL = "https://script.google.com/macros/s/AKfycbzO1IRh8IKrkp1SydESvzvROqG90NS3_lmpuNU-QOmfWzRHj2EkyAUn3_OtWcLS5Hc/exec"; // URL do Google Apps Script publicado
+const scriptURL = "https://script.google.com/macros/s/AKfycbwo87iTG5IFyUolsRhDU-ZbGEBqjsp6qpaWKIwDpHwblHSBUEjkZmbbuN7CPjzX5vdB/exec"; // URL do Google Apps Script publicado
 const form = document.getElementById("formInscricao");
 const mensagem = document.getElementById("mensagemConfirmacao");
 
