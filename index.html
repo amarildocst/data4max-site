@@ -3,113 +3,120 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contabilidade Ética e Reforma Tributária</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
   <header>
     <h2>Projeto de Extensão</h2>
   </header>
-
   <nav>
-    <a href="#sobre">📘 Sobre</a>
-    <a href="#conteudos">📑 Conteúdos</a>
-    <a href="#materiais">🎥 Materiais</a>
-    <a href="#agenda">📅 Agenda</a>
-    <a href="#inscricao">📝 Inscrição</a>
-    <a href="#atendimento">💬 Atendimento</a>
-    <a href="#academico">🎓 Acadêmico</a>
+    <button class="menu-toggle">☰ Menu</button>
+    <!-- Botão de alternância manual -->
+    <button id="theme-toggle">🌙</button>
+    <div class="menu">
+      <a href="#sobre">📘 Sobre</a>
+      <a href="#conteudos">📑 Conteúdos</a>
+      <a href="#materiais">🎥 Materiais</a>
+      <a href="#agenda">📅 Agenda</a>
+      <a href="#inscricao">📝 Inscrição</a>
+      <a href="#atendimento">💬 Atendimento</a>
+      <a href="#academico">🎓 Acadêmico</a>
+    </div>
   </nav>
-
+  <!-- Banner visual -->
   <div class="banner">
-    <h1>Contabilidade Ética e Reforma Tributária</h1>
-    <p>Capacitação comunitária para pequenos empreendedores</p>
-  </div>
-
-  <div class="section" id="sobre">
-    <h2><span>📘</span>Sobre o Projeto</h2>
-    <p>Este projeto busca reduzir barreiras da reforma tributária de 2026, promovendo inclusão socioeconômica e cidadania fiscal.</p>
-  </div>
-
-  <div class="section" id="conteudos">
-    <h2><span>📑</span>Conteúdos Informativos</h2>
-    <ul>
-      <li>Legislação e ética profissional do contador.</li>
-      <li>Obrigações fiscais do MEI em 2026.</li>
-      <li>Ferramentas digitais: SPED, eSocial, gov.br.</li>
-      <li>Educação financeira aplicada a pequenos negócios.</li>
-      <li>Cidadania fiscal e credibilidade empresarial.</li>
-    </ul>
-  </div>
-
-  <div class="section" id="materiais">
-    <h2><span>🎥</span>Materiais Didáticos</h2>
-    <ul>
-      <li>Cartilhas em PDF.</li>
-      <li>Vídeos explicativos.</li>
-      <li>Infográficos resumidos.</li>
-    </ul>
-  </div>
-
-  <div class="section" id="agenda">
-    <h2><span>📅</span>Agenda de Oficinas</h2>
-    <ul>
-      <li>Oficinas mensais sobre ferramentas digitais.</li>
-      <li>Palestras sobre ética e cidadania fiscal.</li>
-      <li>Inscreva-se gratuitamente pelo formulário abaixo.</li>
-    </ul>
-  </div>
-
-  <div class="section" id="inscricao">
-    <h2><span>📝</span>Inscrição nas Oficinas</h2>
-    <form id="formInscricao">
-      <label>Nome completo:</label>
-      <input type="text" id="nome" name="nome" required><br><br>
-
-      <label>E-mail:</label>
-      <input type="email" id="email" name="email" required><br><br>
-
-      <label>Área de interesse:</label>
-      <select id="interesse" name="interesse" required>
-        <option value="">Selecione...</option>
-        <option value="Fiscal">Obrigações Fiscais</option>
-        <option value="Digital">Ferramentas Digitais</option>
-        <option value="Financeira">Educação Financeira</option>
-        <option value="Ética">Ética Profissional</option>
-      </select>
-
-      <label>
-        <input type="checkbox" id="consentimento" name="consentimento" value="Aceito" required>
-        Declaro que li e concordo com o uso dos meus dados pessoais conforme a LGPD.
-      </label><br><br>
-
-      <button type="submit">Enviar inscrição</button>
-    </form>
-
-    <div id="mensagemConfirmacao">
-      <h2><span>✅</span> Inscrição Confirmada</h2>
-      <p>Obrigado por se inscrever! Seus dados foram recebidos com sucesso.</p>
-      <p>Conforme a LGPD, suas informações serão utilizadas exclusivamente para inscrição e comunicação sobre as atividades do projeto.</p>
+    <div class="overlay"></div>
+    <div class="banner-content">
+      <h1>Contabilidade Ética e Reforma Tributária</h1>
+      <p>Capacitação comunitária para pequenos empreendedores</p>
     </div>
-     <div id="mensagemConfirmacao">
- 
-     <h2>✅ Inscrição confirmada!</h2>
-      <p>Obrigado pela sua inscrição. Seus dados foram recebidos com sucesso.</p>
-      <p>Informamos que suas informações serão usadas apenas para fins de organização das oficinas, em conformidade com a LGPD.</p>
-      <p>Você pode solicitar a exclusão dos seus dados a qualquer momento pelo e-mail <strong>admin@data4max.com.br</strong>.</p>
-    </div>
-    </div>
+  </div>
+      <section class="section" id="sobre">
+      <h2><span>📘</span>Sobre o Projeto</h2>
+      <p>Este projeto busca reduzir barreiras da reforma tributária de 2026, promovendo inclusão socioeconômica e cidadania fiscal.</p>
+    </section>
+    <section class="section" id="conteudos">
+      <h2><span>📑</span>Conteúdos Informativos</h2>
+      <ul>
+        <li>Legislação e ética profissional do contador.</li>
+        <li>Obrigações fiscais do MEI em 2026.</li>
+        <li>Ferramentas digitais: SPED, eSocial, gov.br.</li>
+        <li>Educação financeira aplicada a pequenos negócios.</li>
+        <li>Cidadania fiscal e credibilidade empresarial.</li>
+      </ul>
+      </section>
 
-  <div class="section" id="atendimento">
-    <h2><span>💬</span>Canal de Atendimento</h2>
-    <p>Utilize nosso formulário de contato ou chat online para suporte.</p>
+   <section class="section" id="materiais">
+  <h2><span>🎥</span>Materiais Didáticos</h2>
+  <ul>
+    <li>Cartilhas em PDF.</li>
+    <li>Vídeos explicativos.</li>
+    <li>Infográficos resumidos.</li>
+  </ul>
+
+<!-- Botão para assistir no YouTube -->
+  <div class="youtube-link">
+    <a href="https://www.youtube.com/watch?v=bTarX86gB5U" target="_blank">
+      ▶️ Assistir no YouTube
+    </a>
   </div>
 
-  <div class="section" id="academico">
-    <h2><span>🎓</span>Área Acadêmica</h2>
-    <p>Espaço para relatórios reflexivos e publicação de resultados.</p>
-  </div>
+</section>
+
+    <section class="section" id="agenda">
+      <h2><span>📅</span>Agenda de Oficinas</h2>
+      <ul>
+        <li>Oficinas mensais sobre ferramentas digitais.</li>
+        <li>Palestras sobre ética e cidadania fiscal.</li>
+        <li>Inscreva-se gratuitamente pelo formulário abaixo.</li>
+      </ul>
+    </section>
+    <section class="section" id="inscricao">
+      <h2><span>📝</span>Inscrição nas Oficinas</h2>
+      <form id="formInscricao">
+        <label>Nome completo:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label>E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label>Área de interesse:</label>
+        <select id="interesse" name="interesse" required>
+          <option value="">Selecione...</option>
+          <option value="Fiscal">Obrigações Fiscais</option>
+          <option value="Digital">Ferramentas Digitais</option>
+          <option value="Financeira">Educação Financeira</option>
+          <option value="Ética">Ética Profissional</option>
+        </select>
+
+        <label>
+          <input type="checkbox" id="consentimento" name="consentimento" value="Aceito" required>
+          Declaro que li e concordo com o uso dos meus dados pessoais conforme a LGPD.
+        </label>
+
+        <button type="submit">Enviar inscrição</button>
+      </form>
+
+      <div id="mensagemConfirmacao">
+        <h2><span>✅</span> Inscrição Confirmada</h2>
+        <p>Obrigado por se inscrever! Seus dados foram recebidos com sucesso.</p>
+        <p>Conforme a LGPD, suas informações serão utilizadas exclusivamente para inscrição e comunicação sobre as atividades do projeto.</p>
+        <p>Você pode solicitar a exclusão dos seus dados a qualquer momento pelo e-mail <strong>admin@data4max.com.br</strong>.</p>
+      </div>
+    </section>
+
+    <section class="section" id="atendimento">
+      <h2><span>💬</span>Canal de Atendimento</h2>
+      <p>Utilize nosso formulário de contato ou chat online para suporte.</p>
+    </section>
+
+    <section class="section" id="academico">
+      <h2><span>🎓</span>Área Acadêmica</h2>
+      <p>Espaço para relatórios reflexivos e publicação de resultados.</p>
+    </section>
+  </main>
 
   <footer>
     <p>© 2026 Projeto de Extensão - Universidade Parceira</p>
@@ -118,7 +125,3 @@
   <script src="js/script.js"></script>
 </body>
 </html>
-
- 
-
-
