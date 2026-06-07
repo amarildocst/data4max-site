@@ -1,8 +1,10 @@
+/* Estilo base */
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0; padding: 0;
   background-color: #F5F5F5;
   color: #1E3A5F;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 header {
@@ -12,23 +14,37 @@ header {
   text-align: center;
 }
 
-nav {
+/* Navegação */
+nav.navbar {
   background-color: #2E8B57;
   padding: 10px;
-  text-align: center;
+  display: flex;
+  justify-content: space-between; /* separa esquerda e direita */
+  align-items: center;
 }
 
-.menu-toggle {
-  background: none;
-  border: none;
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1; /* ocupa espaço à esquerda */
+}
+
+.logo {
+  font-weight: bold;
   color: white;
-  font-size: 1.5em;
-  cursor: pointer;
+  margin-right: 20px;
 }
 
 .menu {
   display: none;
   flex-direction: column;
+  background-color: #2E8B57;
+  padding: 10px;
+}
+
+.menu.active {
+  display: flex;
 }
 
 .menu a {
@@ -40,6 +56,29 @@ nav {
 }
 .menu a:hover {
   color: #FFD966;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/* Botão de alternância manual */
+#theme-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.3em;
+  cursor: pointer;
 }
 
 /* Banner visual */
@@ -73,6 +112,7 @@ nav {
   margin-top: 10px;
 }
 
+/* Seções */
 .section {
   padding: 30px;
   background-color: white;
@@ -129,52 +169,13 @@ form button:hover {
   font-size: 16px;
 }
 
+/* Rodapé */
 footer {
   background-color: #1E3A5F;
   color: white;
   text-align: center;
   padding: 15px;
   margin-top: 30px;
-}
-/* Botão de alternância manual */
-#theme-toggle {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.3em;
-  cursor: pointer;
-  margin-left: 10px;
-}
-
-/* Banner visual */
-.banner {
-  position: relative;
-  background: url('../img/banner-bg.jpg') center/cover no-repeat;
-  height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #1E3A5F;
-  text-align: center;
-}
-.banner .overlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(255, 217, 102, 0.6);
-}
-.banner-content {
-  position: relative;
-  z-index: 2;
-}
-.banner h1 {
-  font-size: 2.8em;
-  font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-}
-.banner p {
-  font-size: 1.3em;
-  margin-top: 10px;
 }
 
 /* Animações */
@@ -188,8 +189,7 @@ footer {
   transform: translateY(0);
 }
 
-/* Modo escuro manual + automático */
-/* 🔹 Modo escuro manual */
+/* 🌙 Modo escuro manual */
 body.dark-mode {
   background-color: #121212;
   color: #EAEAEA;
@@ -265,10 +265,27 @@ body.dark-mode #mensagemConfirmacao {
 
 /* Responsividade */
 @media (min-width: 769px) {
-  .menu { display: flex; flex-direction: row; justify-content: center; }
-  .menu-toggle { display: none; }
+  .menu { 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center; /* centraliza os itens */
+    gap: 20px; 
+    flex: 1;
+  }
+  .menu-toggle { 
+    display: none; 
+  }
 }
 @media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: #2E8B57;
+    padding: 10px;
+  }
+  .menu.active {
+    display: flex;
+  }
   .banner h1 { font-size: 2em; }
   .section { margin: 10px; padding: 20px; }
   .section h2 { font-size: 1.3em; }
@@ -279,13 +296,15 @@ body.dark-mode #mensagemConfirmacao {
   .section { margin: 5px; padding: 15px; }
   .menu a { font-size: 0.9em; }
 }
+
+/* Botão YouTube */
 .youtube-link {
   text-align: center;
   margin-top: 20px;
 }
 .youtube-link a {
   display: inline-block;
-  background-color: #FF0000; /* cor do YouTube */
+  background-color: #FF0000;
   color: #fff;
   padding: 12px 20px;
   border-radius: 8px;
@@ -296,8 +315,3 @@ body.dark-mode #mensagemConfirmacao {
 .youtube-link a:hover {
   background-color: #cc0000;
 }
-
-
-
-
-
