@@ -19,7 +19,7 @@ nav.navbar {
   background-color: #2E8B57;
   padding: 10px;
   display: flex;
-  justify-content: space-between; /* separa esquerda e direita */
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -27,7 +27,7 @@ nav.navbar {
   display: flex;
   align-items: center;
   gap: 20px;
-  flex: 1; /* ocupa espaço à esquerda */
+  flex: 1;
 }
 
 .logo {
@@ -41,6 +41,7 @@ nav.navbar {
   flex-direction: column;
   background-color: #2E8B57;
   padding: 10px;
+  width: 100%; /* garante largura total no mobile */
 }
 
 .menu.active {
@@ -277,15 +278,6 @@ body.dark-mode #mensagemConfirmacao {
   }
 }
 @media (max-width: 768px) {
-  .menu {
-    display: none;
-    flex-direction: column;
-    background-color: #2E8B57;
-    padding: 10px;
-  }
-  .menu.active {
-    display: flex;
-  }
   .banner h1 { font-size: 2em; }
   .section { margin: 10px; padding: 20px; }
   .section h2 { font-size: 1.3em; }
