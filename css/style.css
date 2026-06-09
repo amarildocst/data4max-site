@@ -307,3 +307,32 @@ body.dark-mode #mensagemConfirmacao {
 .youtube-link a:hover {
   background-color: #cc0000;
 }
+/* Estilo da seção de pesquisa */
+.pesquisa h2 {
+  color: #1E3A5F;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.pesquisa p {
+  text-align: center;
+  color: #555;
+  margin-bottom: 25px;
+  font-size: 1.1em;
+}
+/* Estilo do iframe */
+.iframe-pesquisa {
+  width: 100%;
+  min-height: 800px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+/* Responsividade */
+@media (max-width: 768px) {
+  .iframe-pesquisa { min-height: 1200px; }
+}
+@media (max-width: 480px) {
+  .iframe-pesquisa { min-height: 1600px; }
+}
+
