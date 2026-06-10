@@ -1,5 +1,5 @@
 // Formulário
-const scriptURL = "https://script.google.com/macros/s/AKfycbwR2XRY3XftLn4RloqST3lQFRWmY6NK2Rg7A4Ogs7aTFULsafMcnu7qpP9t_j_y6ZlL/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycbydmsxMCbtUAgaYBCUE5v2KGeed2PiKzmvuOj1HnF4IlXYcC4TcuVwVLTKN4YN7rV-4kw/exec";
 const form = document.getElementById("formInscricao");
 const mensagem = document.getElementById("mensagemConfirmacao");
 
