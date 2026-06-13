@@ -335,4 +335,29 @@ body.dark-mode #mensagemConfirmacao {
 @media (max-width: 480px) {
   .iframe-pesquisa { min-height: 1600px; }
 }
+/* Contado Visistantes */
+footer {
+  background-color: #1E3A5F; /* azul escuro */
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
 
+.rodape-conteudo {
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  gap: 20px; /* espaço entre © e contador */
+  align-items: center;
+}
+
+.contador {
+  font-size: 0.9em;
+  color: white; /* mantém padrão do rodapé */
+}
+
+.contador span {
+  color: #FFC107; /* laranja amarelado, discreto para destaque */
+  font-weight: bold;
+  margin-left: 6px;
+}
