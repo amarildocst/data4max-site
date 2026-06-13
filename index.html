@@ -149,7 +149,7 @@
 
 <script>
   async function contarVisitas() {
-    const resposta = await fetch('https://api.countapi.xyz/hit/data4max-site/visitas');
+    const resposta = await fetch('https://api.countapi.xyz/hit/data4max.com.br/visitas');
     const dados = await resposta.json();
     animarContador(0, dados.value, 1200);
   }
