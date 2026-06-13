@@ -7,6 +7,7 @@
   <title>Contabilidade Ética e Reforma Tributária</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <header>
     <h2>Projeto de Extensão</h2>
@@ -139,6 +140,40 @@
 
   <footer>
     <p>© 2026 Projeto de Extensão - Universidade Parceira</p>
+    <footer>
+  <div class="rodape-conteudo">
+    <span>© 2026 Data4Max</span>
+    <span class="contador">👥 Visitantes: <span id="visitas">0</span></span>
+  </div>
+</footer>
+
+<script>
+  async function contarVisitas() {
+    const resposta = await fetch('https://api.countapi.xyz/hit/data4max-site/visitas');
+    const dados = await resposta.json();
+    animarContador(0, dados.value, 1200);
+  }
+
+  function animarContador(inicio, fim, duracao) {
+    const elemento = document.getElementById('visitas');
+    let inicioTempo = null;
+
+    function atualizar(timestamp) {
+      if (!inicioTempo) inicioTempo = timestamp;
+      const progresso = Math.min((timestamp - inicioTempo) / duracao, 1);
+      const valorAtual = Math.floor(progresso * (fim - inicio) + inicio);
+      elemento.innerText = valorAtual;
+      if (progresso < 1) {
+        requestAnimationFrame(atualizar);
+      }
+    }
+
+    requestAnimationFrame(atualizar);
+  }
+
+  contarVisitas();
+</script>
+
   </footer>
 
   <script src="js/script.js"></script>
