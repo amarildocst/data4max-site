@@ -1,7 +1,7 @@
 // ===============================
 // 📌 Formulário de Inscrição (Google Apps Script)
 // ===============================
-const scriptURL = "https://script.google.com/macros/s/AKfycbydmsxMCbtUAgaYBCUE5v2KGeed2PiKzmvuOj1HnF4IlXYcC4TcuVwVLTKN4YN7rV-4kw/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycbzUttOAHhspIV8d4oZj1LfCSrbZnrrLIGMSGVqbxlgPv0Nnq5l_1PbbK4loJMADAkS-zA/exec";
 const form = document.getElementById("formInscricao");
 const mensagem = document.getElementById("mensagemConfirmacao");
 
