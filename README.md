@@ -12,6 +12,7 @@ Ele foi desenvolvido para ser responsivo, acessível e moderno, com suporte a mo
 - [Animações de entrada](ca://s?q=Animacoes_com_IntersectionObserver) com IntersectionObserver.
 - [Formulário de inscrição](ca://s?q=Formularios_com_Google_Sheets) integrado ao Google Sheets.
 - [Banner com parallax](ca://s?q=Parallax_com_giroscopio) simples via giroscópio em dispositivos móveis.
+- [Aviso LGPD](ca://s?q=Aviso_LGPD_em_sites) com consentimento para coleta estatística via Statcounter.
 
 ---
 
@@ -19,6 +20,7 @@ Ele foi desenvolvido para ser responsivo, acessível e moderno, com suporte a mo
 - `index.html` → Página principal.
 - `css/style.css` → Estilos visuais e responsividade.
 - `js/script.js` → Funcionalidades interativas.
+- `privacidade.html` → Página de política de privacidade.
 - `README.md` → Documentação do projeto.
 
 ---
@@ -26,6 +28,7 @@ Ele foi desenvolvido para ser responsivo, acessível e moderno, com suporte a mo
 ## 📱 Compatibilidade
 Testado em:
 - Chrome, Edge e Firefox (Android).
+- Safari (iOS – navegador nativo do iPhone).
 - Desktop (Windows/Linux).
 
 ---
@@ -42,12 +45,14 @@ Testado em:
 - Implementar [lazy loading](ca://s?q=Lazy_loading_em_sites) para otimizar imagens.
 - Adicionar [feedback visual em botões](ca://s?q=Feedback_visual_em_botoes) (animações ao clicar).
 - Expandir o efeito [parallax](ca://s?q=Parallax_com_giroscopio) para desktop.
+- Melhorar acessibilidade com [ARIA labels](ca://s?q=ARIA_labels_em_sites).
 
 ---
 
 ## 📜 Licença
 Este projeto é de uso acadêmico e comunitário, vinculado ao Projeto de Extensão da Universidade Parceira.
-----------------------------------------------------------------------------------------------------------
+
+---
 
 # Extension Project - Data4max
 
@@ -63,6 +68,7 @@ It was designed to be responsive, accessible, and modern, with dark mode support
 - [Entry animations](ca://s?q=Animations_with_IntersectionObserver) using IntersectionObserver.
 - [Registration form](ca://s?q=Google_Sheets_form_integration) integrated with Google Sheets.
 - [Parallax banner](ca://s?q=Parallax_with_gyroscope) effect on mobile devices.
+- [LGPD consent banner](ca://s?q=LGPD_consent_banner) for Statcounter analytics.
 
 ---
 
@@ -70,6 +76,7 @@ It was designed to be responsive, accessible, and modern, with dark mode support
 - `index.html` → Main page.
 - `css/style.css` → Visual styles and responsive design.
 - `js/script.js` → Interactive functionalities.
+- `privacidade.html` → Privacy policy page.
 - `README.md` → Project documentation.
 
 ---
@@ -77,6 +84,7 @@ It was designed to be responsive, accessible, and modern, with dark mode support
 ## 📱 Compatibility
 Tested on:
 - Chrome, Edge, and Firefox (Android).
+- Safari (iOS – native iPhone browser).
 - Desktop (Windows/Linux).
 
 ---
@@ -93,6 +101,7 @@ Tested on:
 - Implement [lazy loading](ca://s?q=Lazy_loading_in_websites) for images to improve performance.
 - Add [button feedback animations](ca://s?q=Button_click_feedback) for better UX.
 - Expand [parallax effects](ca://s?q=Parallax_with_gyroscope) for desktop.
+- Improve accessibility with [ARIA labels](ca://s?q=ARIA_labels_in_websites).
 
 ---
 
