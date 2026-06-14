@@ -1,4 +1,6 @@
-/* Estilo base */
+/* ===============================
+   🎨 Estilo Base
+=============================== */
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0; padding: 0;
@@ -14,7 +16,9 @@ header {
   text-align: center;
 }
 
-/* Navegação */
+/* ===============================
+   📌 Navegação
+=============================== */
 nav.navbar {
   background-color: #2E8B57;
   padding: 10px;
@@ -41,12 +45,10 @@ nav.navbar {
   flex-direction: column;
   background-color: #2E8B57;
   padding: 10px;
-  width: 100%; /* garante largura total no mobile */
+  width: 100%;
 }
 
-.menu.active {
-  display: flex;
-}
+.menu.active { display: flex; }
 
 .menu a {
   color: white;
@@ -55,9 +57,7 @@ nav.navbar {
   font-weight: bold;
   transition: color 0.3s;
 }
-.menu a:hover {
-  color: #FFD966;
-}
+.menu a:hover { color: #FFD966; }
 
 .nav-right {
   display: flex;
@@ -65,24 +65,18 @@ nav.navbar {
   gap: 15px;
 }
 
-.menu-toggle {
+.menu-toggle, #theme-toggle {
   background: none;
   border: none;
   color: white;
-  font-size: 1.5em;
   cursor: pointer;
 }
+.menu-toggle { font-size: 1.5em; }
+#theme-toggle { font-size: 1.3em; }
 
-/* Botão de alternância manual */
-#theme-toggle {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.3em;
-  cursor: pointer;
-}
-
-/* Banner visual */
+/* ===============================
+   📌 Banner
+=============================== */
 .banner {
   position: relative;
   background: url('../img/banner-bg.jpg') center/cover no-repeat;
@@ -90,7 +84,6 @@ nav.navbar {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #1E3A5F;
   text-align: center;
 }
 .banner .overlay {
@@ -99,21 +92,17 @@ nav.navbar {
   width: 100%; height: 100%;
   background: rgba(255, 217, 102, 0.6);
 }
-.banner-content {
-  position: relative;
-  z-index: 2;
-}
+.banner-content { position: relative; z-index: 2; }
 .banner h1 {
   font-size: 2.8em;
   font-weight: 700;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
-.banner p {
-  font-size: 1.3em;
-  margin-top: 10px;
-}
+.banner p { font-size: 1.3em; margin-top: 10px; }
 
-/* Seções */
+/* ===============================
+   📌 Seções
+=============================== */
 .section {
   padding: 30px;
   background-color: white;
@@ -123,11 +112,11 @@ nav.navbar {
   max-width: 900px;
   transition: transform 0.3s ease;
 }
-.section:hover {
-  transform: translateY(-5px);
-}
+.section:hover { transform: translateY(-5px); }
 
-/* Formulário */
+/* ===============================
+   📌 Formulário
+=============================== */
 form {
   display: flex;
   flex-direction: column;
@@ -146,11 +135,11 @@ form button {
   cursor: pointer;
   transition: background 0.3s;
 }
-form button:hover {
-  background-color: #256d46;
-}
+form button:hover { background-color: #256d46; }
 
-/* Mensagem de confirmação */
+/* ===============================
+   📌 Mensagem de Confirmação
+=============================== */
 #mensagemConfirmacao {
   display: none;
   text-align: center;
@@ -161,25 +150,34 @@ form button:hover {
   background-color: #f9fff9;
   color: #333;
 }
-#mensagemConfirmacao h2 {
-  color: #4CAF50;
-  margin-bottom: 10px;
-}
-#mensagemConfirmacao p {
-  margin: 8px 0;
-  font-size: 16px;
-}
+#mensagemConfirmacao h2 { color: #4CAF50; margin-bottom: 10px; }
+#mensagemConfirmacao p { margin: 8px 0; font-size: 16px; }
 
-/* Rodapé */
-footer {
-  background-color: #1E3A5F;
-  color: white;
+/* ===============================
+   📌 Rodapé
+=============================== */
+.footer {
+  background: #004080;
+  color: #fff;
   text-align: center;
-  padding: 15px;
-  margin-top: 30px;
+  padding: 1rem;
 }
+.rodape-conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+}
+.rodape-conteudo a {
+  color: #FFC107;
+  text-decoration: none;
+}
+.rodape-conteudo a:hover { text-decoration: underline; }
 
-/* Animações */
+/* ===============================
+   📌 Animações
+=============================== */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -190,7 +188,9 @@ footer {
   transform: translateY(0);
 }
 
-/* 🌙 Modo escuro manual */
+/* ===============================
+   🌙 Modo Escuro
+=============================== */
 body.dark-mode {
   background-color: #121212;
   color: #EAEAEA;
@@ -199,28 +199,20 @@ body.dark-mode header,
 body.dark-mode footer {
   background: linear-gradient(90deg, #0D1B2A, #1B4332);
 }
-body.dark-mode nav {
-  background-color: #1B4332;
-}
+body.dark-mode nav { background-color: #1B4332; }
 body.dark-mode .menu a { color: #EAEAEA; }
 body.dark-mode .banner {
   background: url('../img/banner-dark.jpg') center/cover no-repeat;
 }
-body.dark-mode .banner .overlay {
-  background: rgba(0,0,0,0.5);
-}
+body.dark-mode .banner .overlay { background: rgba(0,0,0,0.5); }
 body.dark-mode .banner h1,
-body.dark-mode .banner p {
-  color: #FFD966;
-}
+body.dark-mode .banner p { color: #FFD966; }
 body.dark-mode .section {
   background-color: #1E1E1E;
   color: #EAEAEA;
   box-shadow: 0 4px 10px rgba(255,255,255,0.1);
 }
-body.dark-mode form button {
-  background-color: #1B4332;
-}
+body.dark-mode form button { background-color: #1B4332; }
 body.dark-mode #mensagemConfirmacao {
   background-color: #1E1E1E;
   border-color: #4CAF50;
@@ -229,34 +221,19 @@ body.dark-mode #mensagemConfirmacao {
 
 /* 🔹 Modo escuro automático */
 @media (prefers-color-scheme: dark) {
-  body {
-    background-color: #121212;
-    color: #EAEAEA;
-  }
-  header, footer {
-    background: linear-gradient(90deg, #0D1B2A, #1B4332);
-  }
-  nav {
-    background-color: #1B4332;
-  }
+  body { background-color: #121212; color: #EAEAEA; }
+  header, footer { background: linear-gradient(90deg, #0D1B2A, #1B4332); }
+  nav { background-color: #1B4332; }
   .menu a { color: #EAEAEA; }
-  .banner {
-    background: url('../img/banner-dark.jpg') center/cover no-repeat;
-  }
-  .banner .overlay {
-    background: rgba(0,0,0,0.5);
-  }
-  .banner h1, .banner p {
-    color: #FFD966;
-  }
+  .banner { background: url('../img/banner-dark.jpg') center/cover no-repeat; }
+  .banner .overlay { background: rgba(0,0,0,0.5); }
+  .banner h1, .banner p { color: #FFD966; }
   .section {
     background-color: #1E1E1E;
     color: #EAEAEA;
     box-shadow: 0 4px 10px rgba(255,255,255,0.1);
   }
-  form button {
-    background-color: #1B4332;
-  }
+  form button { background-color: #1B4332; }
   #mensagemConfirmacao {
     background-color: #1E1E1E;
     border-color: #4CAF50;
@@ -264,36 +241,41 @@ body.dark-mode #mensagemConfirmacao {
   }
 }
 
-/* Responsividade */
+/* ===============================
+   📌 Responsividade
+=============================== */
 @media (min-width: 769px) {
   .menu { 
     display: flex; 
     flex-direction: row; 
-    justify-content: center; /* centraliza os itens */
+    justify-content: center;
     gap: 20px; 
     flex: 1;
   }
-  .menu-toggle { 
-    display: none; 
-  }
+  .menu-toggle { display: none; }
 }
 @media (max-width: 768px) {
   .banner h1 { font-size: 2em; }
   .section { margin: 10px; padding: 20px; }
   .section h2 { font-size: 1.3em; }
+  .iframe-pesquisa { min-height: 1200px; }
 }
 @media (max-width: 480px) {
   .banner { padding: 30px; }
   .banner h1 { font-size: 1.6em; }
   .section { margin: 5px; padding: 15px; }
   .menu a { font-size: 0.9em; }
+  .iframe-pesquisa { min-height: 1600px; }
 }
 
-/* Botão YouTube */
+/* ===============================
+   📌 Botão YouTube
+=============================== */
 .youtube-link {
   text-align: center;
   margin-top: 20px;
 }
+
 .youtube-link a {
   display: inline-block;
   background-color: #FF0000;
@@ -304,10 +286,14 @@ body.dark-mode #mensagemConfirmacao {
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
+
 .youtube-link a:hover {
   background-color: #cc0000;
 }
-/* Estilo da seção de pesquisa */
+
+/* ===============================
+   📌 Seção de Pesquisa
+=============================== */
 .pesquisa h2 {
   color: #1E3A5F;
   text-align: center;
@@ -320,44 +306,53 @@ body.dark-mode #mensagemConfirmacao {
   margin-bottom: 25px;
   font-size: 1.1em;
 }
+
 /* Estilo do iframe */
 .iframe-pesquisa {
   width: 100%;
-  min-height: 800px;
+  min-height: 80vh;
   border: none;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-/* Responsividade */
+
+/* Responsividade do iframe */
 @media (max-width: 768px) {
   .iframe-pesquisa { min-height: 1200px; }
 }
 @media (max-width: 480px) {
   .iframe-pesquisa { min-height: 1600px; }
 }
-/* Contado Visistantes */
-footer {
-  background-color: #1E3A5F; /* azul escuro */
-  color: white;
-  text-align: center;
+
+/* ===============================
+   📌 Aviso LGPD
+=============================== */
+.aviso-lgpd {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #222;
+  color: #fff;
   padding: 15px;
-  margin-top: 30px;
-}
-
-.rodape-conteudo {
+  text-align: center;
+  font-size: 14px;
+  z-index: 1000;
   display: flex;
-  justify-content: center; /* centraliza horizontalmente */
-  gap: 20px; /* espaço entre © e contador */
+  justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 
-.contador {
-  font-size: 0.9em;
-  color: white; /* mantém padrão do rodapé */
+.aviso-lgpd a {
+  color: #ffcc00;
+  text-decoration: underline;
 }
 
-.contador span {
-  color: #FFC107; /* laranja amarelado, discreto para destaque */
-  font-weight: bold;
-  margin-left: 6px;
+.aviso-lgpd button {
+  padding: 5px 10px;
+  background-color: #ffcc00;
+  border: none;
+  cursor: pointer;
 }
+
