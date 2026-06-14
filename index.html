@@ -7,19 +7,6 @@
   <title>Contabilidade Ética e Reforma Tributária</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<!-- Default Statcounter code for data4max-site https://data4max.com.br/ -->
-<script type="text/javascript">
-var sc_project=13295865; 
-var sc_invisible=1; 
-var sc_security="4c26ab0c"; 
-</script>
-<script type="text/javascript"
-src="https://www.statcounter.com/counter/counter.js" async></script>
-<noscript><div class="statcounter"><a title="Web Analytics"
-href="https://statcounter.com/" target="_blank"><img class="statcounter"
-src="https://c.statcounter.com/13295865/0/4c26ab0c/1/" alt="Web Analytics"
-referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-<!-- End of Statcounter Code -->
 <body>
   <header>
     <h2>Projeto de Extensão</h2>
@@ -136,7 +123,7 @@ referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
       <h2><span>✅</span> Inscrição Confirmada</h2>
       <p>Obrigado por se inscrever! Seus dados foram recebidos com sucesso.</p>
       <p>Conforme a LGPD, suas informações serão utilizadas exclusivamente para inscrição e comunicação sobre as atividades do projeto.</p>
-      <p>Você pode solicitar a exclusão do seu e-mail e nome a qualquer momento pelo contato e-mail: <strong>admin@data4max.com.br</strong>.</p>
+      <p>Você pode solicitar a exclusão do seu e-mail e nome a qualquer momento pelo contato e-mail: <strong>contato@data4max.com.br</strong>.</p>
     </div>
   </section>
 
@@ -150,45 +137,22 @@ referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
     <p>Espaço para relatórios reflexivos e publicação de resultados.</p>
   </section>
 
-  <footer>
-    <p>© 2026 Projeto de Extensão - Universidade Parceira</p>
-    <footer>
+ <footer class="footer">
   <div class="rodape-conteudo">
-    <span>© 2026 Data4Max</span>
-    <span class="contador">👥 Visitantes: <span id="visitas">0</span></span>
+    <span>© 2026 Projeto de Extensão - Universidade Parceira</span> |
+    <span>© 2026 Data4Max</span> |
+    <span><a href="privacidade.html">Política de Privacidade</a></span>
   </div>
-</footer>
-
-<script>
-  async function contarVisitas() {
-    const resposta = await fetch('https://api.countapi.xyz/hit/data4max.com.br/visitas');
-    const dados = await resposta.json();
-    animarContador(0, dados.value, 1200);
-  }
-
-  function animarContador(inicio, fim, duracao) {
-    const elemento = document.getElementById('visitas');
-    let inicioTempo = null;
-
-    function atualizar(timestamp) {
-      if (!inicioTempo) inicioTempo = timestamp;
-      const progresso = Math.min((timestamp - inicioTempo) / duracao, 1);
-      const valorAtual = Math.floor(progresso * (fim - inicio) + inicio);
-      elemento.innerText = valorAtual;
-      if (progresso < 1) {
-        requestAnimationFrame(atualizar);
-      }
-    }
-
-    requestAnimationFrame(atualizar);
-  }
-
-  contarVisitas();
-</script>
-
   </footer>
 
-  <script src="js/script.js"></script>
+  <!-- Aviso LGPD -->
+<div id="avisoLGPD" class="aviso-lgpd">
+  Este site utiliza cookies e coleta dados de navegação para fins estatísticos
+  (via Statcounter), conforme nossa <a href="privacidade.html">Política de Privacidade</a>.
+  Ao continuar navegando, você concorda com o uso dessas informações.
+  <button id="aceitarLGPD">Aceitar</button>
+</div>
+
+<script src="js/script.js"></script>
 </body>
 </html>
-
