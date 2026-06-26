@@ -290,7 +290,94 @@ body.dark-mode #mensagemConfirmacao {
 .youtube-link a:hover {
   background-color: #cc0000;
 }
+/* ===============================
+   📌 Botão YouTube com SVG - CFC
+=============================== */
+.youtube-link {
+  text-align: center;
+  margin-top: 20px;
+}
 
+.youtube-link a {
+  display: inline-block;
+  background-color: #FF0000;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.youtube-link a:hover {
+  background-color: #cc0000;
+}
+
+/* ===============================
+   📌 Botão YouTube com texto centralizado
+=============================== */
+
+.youtube-container {
+  display: flex;
+  flex-direction: column; /* força empilhamento */
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  gap: 15px; /* espaçamento entre texto e botão */
+}
+
+.youtube-info {
+  font-size: 0.95rem;
+  color: #1E3A5F;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center; /* centraliza texto + ícone */
+}
+
+.youtube-icon {
+  width: 28px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.youtube-link {
+  flex: 1;
+  text-align: center; /* botão centralizado */
+}
+
+.youtube-link a {
+  display: inline-block;
+  background-color: #FF0000;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.youtube-link a:hover {
+  background-color: #cc0000;
+}
+
+/* 🌙 Modo escuro */
+body.dark-mode .youtube-info {
+  color: #FFD966;
+}
+
+/* 📱 Responsividade */
+@media (max-width: 600px) {
+  .youtube-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  .youtube-info {
+    justify-content: center;
+  }
+}
 /* ===============================
    📌 Seção de Pesquisa
 =============================== */
@@ -356,3 +443,59 @@ body.dark-mode #mensagemConfirmacao {
   cursor: pointer;
 }
 
+/* ===============================
+   📌 Tooltip Customizado
+=============================== */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip {
+  visibility: hidden;
+  opacity: 0;
+  width: 250px;
+  background-color: #1E3A5F;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+  position: absolute;
+  z-index: 10;
+  bottom: 125%; /* aparece acima do link */
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.3s ease;
+  font-size: 0.9em;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* seta abaixo do tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: #1E3A5F transparent transparent transparent;
+}
+
+.tooltip-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* ===============================
+   📌 Tooltip Customizado adapte ao modo escuro
+=============================== */
+
+body.dark-mode .tooltip {
+  background-color: #FFD966;
+  color: #1E1E1E;
+}
+
+body.dark-mode .tooltip::after {
+  border-color: #FFD966 transparent transparent transparent;
+}
