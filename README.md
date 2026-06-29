@@ -1,6 +1,6 @@
 # Projeto de Extensão - Data4max
 
-Este projeto aborda **Contabilidade Ética e Reforma Tributária** com foco em capacitação comunitária para pequenos empreendedores.  
+Este projeto aborda **Contabilidade Ética e Reforma Tributária** com foco em capacitação comunitária para pequenos empreendedores.
 Ele foi desenvolvido para ser responsivo, acessível e moderno, com suporte a modo escuro e integração com Google Sheets.
 
 ---
@@ -12,13 +12,15 @@ Ele foi desenvolvido para ser responsivo, acessível e moderno, com suporte a mo
 - [Animações de entrada](ca://s?q=Animacoes_com_IntersectionObserver) com IntersectionObserver.
 - [Formulário de inscrição](ca://s?q=Formularios_com_Google_Sheets) integrado ao Google Sheets.
 - [Banner com parallax](ca://s?q=Parallax_com_giroscopio) simples via giroscópio em dispositivos móveis.
+- [Tooltips contextuais](ca://s?q=CSS_tooltip_sem_JS) em materiais e seções "em desenvolvimento" sem usar JS.
+- [Seção de Materiais](ca://s?q=Seção_materiais_acessíveis) com Cartilha, Vídeo Aula, Infográfico e Manuais.
 - [Aviso LGPD](ca://s?q=Aviso_LGPD_em_sites) com consentimento para coleta estatística via Statcounter.
 
 ---
 
 ## 📂 Estrutura de Arquivos
 - `index.html` → Página principal.
-- `css/style.css` → Estilos visuais e responsividade.
+- `css/style.css` → Estilos visuais, responsividade e tooltips.
 - `js/script.js` → Funcionalidades interativas.
 - `privacidade.html` → Página de política de privacidade.
 - `README.md` → Documentação do projeto.
@@ -42,10 +44,12 @@ Testado em:
 ---
 
 ## 📌 Próximos Passos
-- Implementar [lazy loading](ca://s?q=Lazy_loading_em_sites) para otimizar imagens.
-- Adicionar [feedback visual em botões](ca://s?q=Feedback_visual_em_botoes) (animações ao clicar).
-- Expandir o efeito [parallax](ca://s?q=Parallax_com_giroscopio) para desktop.
-- Melhorar acessibilidade com [ARIA labels](ca://s?q=ARIA_labels_em_sites).
+- [x] Implementar [tooltips CSS](ca://s?q=CSS_tooltip_sem_JS) padronizados `font-size: 14px` em todos os balões
+- [x] Corrigir [vídeo 100% responsivo](ca://s?q=Video_responsivo_sem_botao) sem comportamento de botão
+- [ ] Implementar [lazy loading](ca://s?q=Lazy_loading_em_sites) para otimizar imagens.
+- [ ] Adicionar [feedback visual em botões](ca://s?q=Feedback_visual_em_botoes) (animações ao clicar).
+- [ ] Expandir o efeito [parallax](ca://s?q=Parallax_com_giroscopio) para desktop.
+- [ ] Melhorar acessibilidade com [ARIA labels](ca://s?q=ARIA_labels_em_sites).
 
 ---
 
@@ -56,7 +60,7 @@ Este projeto é de uso acadêmico e comunitário, vinculado ao Projeto de Extens
 
 # Extension Project - Data4max
 
-This project focuses on **Ethical Accounting and Tax Reform**, aiming to empower small entrepreneurs through community training.  
+This project focuses on **Ethical Accounting and Tax Reform**, aiming to empower small entrepreneurs through community training.
 It was designed to be responsive, accessible, and modern, with dark mode support and Google Sheets integration.
 
 ---
@@ -68,13 +72,15 @@ It was designed to be responsive, accessible, and modern, with dark mode support
 - [Entry animations](ca://s?q=Animations_with_IntersectionObserver) using IntersectionObserver.
 - [Registration form](ca://s?q=Google_Sheets_form_integration) integrated with Google Sheets.
 - [Parallax banner](ca://s?q=Parallax_with_gyroscope) effect on mobile devices.
+- [Contextual tooltips](ca://s?q=CSS_tooltip_without_JS) for materials and "under development" sections without JS.
+- [Materials section](ca://s?q=Accessible_materials_section) with Booklet, Video Lesson, Infographic and Manuals.
 - [LGPD consent banner](ca://s?q=LGPD_consent_banner) for Statcounter analytics.
 
 ---
 
 ## 📂 Project Structure
 - `index.html` → Main page.
-- `css/style.css` → Visual styles and responsive design.
+- `css/style.css` → Visual styles, responsive design and tooltips.
 - `js/script.js` → Interactive functionalities.
 - `privacidade.html` → Privacy policy page.
 - `README.md` → Project documentation.
@@ -98,10 +104,12 @@ Tested on:
 ---
 
 ## 📌 Next Steps
-- Implement [lazy loading](ca://s?q=Lazy_loading_in_websites) for images to improve performance.
-- Add [button feedback animations](ca://s?q=Button_click_feedback) for better UX.
-- Expand [parallax effects](ca://s?q=Parallax_with_gyroscope) for desktop.
-- Improve accessibility with [ARIA labels](ca://s?q=ARIA_labels_in_websites).
+- [x] Standardized CSS [tooltips](ca://s?q=CSS_tooltip_without_JS) with `font-size: 14px` for all balloons
+- [x] Fixed [100% responsive video](ca://s?q=Responsive_video_no_button) with no button behavior
+- [ ] Implement [lazy loading](ca://s?q=Lazy_loading_in_websites) for images to improve performance.
+- [ ] Add [button feedback animations](ca://s?q=Button_click_feedback) for better UX.
+- [ ] Expand [parallax effects](ca://s?q=Parallax_with_gyroscope) for desktop.
+- [ ] Improve accessibility with [ARIA labels](ca://s?q=ARIA_labels_in_websites).
 
 ---
 
