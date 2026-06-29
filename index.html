@@ -1,42 +1,44 @@
-  <!-- Aqui vai o conteúdo da página -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contabilidade Ética e Reforma Tributária</title>
+  <title>Reforma Tributária 2026: O que muda no SEU MEI? | Data4max</title>  
   <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <header>
-    <h2>Projeto de Extensão</h2>
-  </header>
 
-  <!-- Navegação com menu hamburguer e botão de tema -->
- <nav class="navbar">
-  <div class="nav-left">
-    <div class="logo">Data4max</div>
-    <ul class="menu" id="menu">
-      <li><a href="#sobre">📘 Sobre</a></li>
-      <li><a href="#conteudos">📑 Conteúdos</a></li>
-      <li><a href="#materiais">🎥 Materiais</a></li>
-      <li><a href="#agenda">📅 Agenda</a></li>
-      <li><a href="#inscricao">📝 Inscrição</a></li>
-      <li><a href="#atendimento">💬 Atendimento</a></li>
-      <li><a href="#academico">🎓 Acadêmico</a></li>
-    </ul>
-  </div>
-  <div class="nav-right">
-    <button id="theme-toggle">🌙</button>
-    <button class="menu-toggle" id="menu-toggle">☰ Menu</button>
-  </div>
-</nav>
+   <!-- Navegação com menu hamburguer e botão de tema -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <div class="logo">Data4max</div>
+      <ul class="menu" id="menu">
+        <li><a href="#pesquisa">🔍 Meu Diagnóstico</a></li>
+        <li><a href="#mapa">📘 Entenda a Reforma</a></li>
+        <li><a href="#agenda">📅 Oficinas Grátis</a></li>
+        <li class="hide-menu"><a href="#materiais">🎥 Materiais</a></li>
+        <li class="hide-menu"><a href="#atendimento">💬 Atendimento</a></li>
+        <li class="hide-menu"><a href="#academico">🎓 Acadêmico</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <button id="theme-toggle">🌙</button>
+      <button class="menu-toggle" id="menu-toggle">☰ Menu</button>
+    </div>
+  </nav>
+
+  <!-- 👇 HERO CENTRALIZADO - NOVO -->
+  <section class="hero">
+    <div class="container">
+      <h1>Reforma Tributária 2026: O que muda no SEU MEI?</h1>
+      <p>Projeto de Extensão Data4max. Sem juridiquês, só o que importa pro seu bolso.</p>
+      <button class="btn-cta" onclick="document.getElementById('pesquisa').scrollIntoView()">👉 Descobrir em 60 segundos</button>
+    </div>
+  </section>
 
   <!-- Banner visual -->
   <div class="banner">
     <div class="overlay"></div>
     <div class="banner-content">
-      <h1>Contabilidade Ética e Reforma Tributária</h1>
+      <h2>Contabilidade Ética e Reforma Tributária</h2> <!-- Era H1 -->
       <p>Capacitação comunitária para pequenos empreendedores</p>
     </div>
   </div>
@@ -46,84 +48,163 @@
     <p>Este projeto busca reduzir barreiras da reforma tributária de 2026, promovendo inclusão socioeconômica e cidadania fiscal.</p>
   </section>
 
-<section class="section" id="conteudos">
-  <h2><span>📑</span>Conteúdos Informativos</h2>
-  <ul>
-    <li>Legislação e ética profissional do contador.</li>
-    <li>Obrigações fiscais do MEI em 2026.</li>
-    <li>Ferramentas digitais: SPED, eSocial, gov.br.</li>
-    <li>Educação financeira aplicada a pequenos negócios.</li>
-    <li>Cidadania fiscal e credibilidade empresarial.</li>
-    <li>
-  <a href="https://www.gov.br/receitafederal/pt-br/centrais-de-conteudo/publicacoes/manuais/reforma-tributaria-do-consumo" target="_blank" class="tooltip-container">
-    📘 Manuais da Reforma Tributária do Consumo
-    <span class="tooltip">Acesse os manuais oficiais da Receita Federal sobre a Reforma Tributária do Consumo</span>
-  </a>
-</li>
-<li>
-  <a href="https://consumo.tributos.gov.br/servico/calcular-tributos-consumo/calculadora/regime-geral" target="_blank" class="tooltip-container">
-    🧮 Calculadora - Tributação sobre Consumo (Beta)
-    <span class="tooltip">Ferramenta beta para simular a tributação sobre consumo no regime geral</span>
-  </a>
-</li>
-  </ul>
-</section>
+  <section class="section" id="conteudos">
+    <h2><span>📑</span>Conteúdos Informativos</h2>
+    <ul>
+      <li>Legislação e ética profissional do contador.</li>
+      <li>Obrigações fiscais do MEI em 2026.</li>
+      <li>Ferramentas digitais: SPED, eSocial, gov.br.</li>
+      <li>Educação financeira aplicada a pequenos negócios.</li>
+      <li>Cidadania fiscal e credibilidade empresarial.</li>
+      <li>
+        <a href="https://www.gov.br/receitafederal/pt-br/centrais-de-conteudo/publicacoes/manuais/reforma-tributaria-do-consumo" target="_blank" class="tooltip-container">
+          📘 Manuais da Reforma Tributária do Consumo
+          <span class="tooltip">Acesse os manuais oficiais da Receita Federal sobre a Reforma Tributária do Consumo</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://consumo.tributos.gov.br/servico/calcular-tributos-consumo/calculadora/regime-geral" target="_blank" class="tooltip-container">
+          🧮 Calculadora - Tributação sobre Consumo (Beta)
+          <span class="tooltip">Ferramenta beta para simular a tributação sobre consumo no regime geral</span>
+        </a>
+      </li>
+    </ul>
+  </section>
 
+  <!-- =============================== MATERIAIS - HTML v4 =============================== -->
   <section class="section" id="materiais">
     <h2><span>🎥</span>Materiais Didáticos</h2>
-    <ul>
-      <li>Cartilhas em PDF.</li>
-      <li>Vídeos explicativos.</li>
-      <li>Infográficos resumidos.</li>
+    <ul class="materiais-lista">
+      <li>
+        <div class="tooltip-container">
+          <a href="assets/Reforma_Tributaria_Pequenos_Negocios_ebook.pdf" target="_blank" rel="noopener noreferrer" class="materiais-link">
+            📘 Cartilhas em PDF
+          </a>
+          <span class="tooltip">Material oficial do Sebrae. 17 páginas, linguagem simples.</span>
+        </div>
+      </li>
+      <li>
+        <div class="materiais-video-wrapper">
+          <p class="materiais-titulo tooltip-container">
+            🎬 Como Emitir NFe para MEI
+            <span class="tooltip">Passo a passo atualizado pra emitir nota fiscal sendo MEI.</span>
+          </p>
+          <div class="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/S_SVai_l8MQ"
+              title="Como emitir NFe para MEI"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="youtube-container">
+          <div class="youtube-info">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 29 20" aria-hidden="true" class="youtube-icon">
+              <path d="M14.4848 20C14.4848 20 23.5695 20 25.8229 19.4C27.0917 19.06 28.0459 18.08 28.3808 16.87C29 14.65 29 9.98 29 9.98C29 9.98 29 5.34 28.3808 3.14C28.0459 1.9 27.0917 0.94 25.8229 0.61C23.5695 0 14.4848 0 14.4848 0C14.4848 0 5.42037 0 3.17711 0.61C1.9286 0.94 0.954148 1.9 0.59888 3.14C0 5.34 0 9.98 0 9.98C0 9.98 0 14.65 0.59888 16.87C0.954148 18.08 1.9286 19.06 3.17711 19.4C5.42037 20 14.4848 20 14.4848 20Z" fill="#FF0000"></path>
+              <path d="M19 10L11.5 5.75V14.25L19 10Z" fill="white"></path>
+            </svg>
+            Reforma Tributária - Canal TV-CFC
+          </div>
+          <div class="youtube-link">
+            <a href="https://www.youtube.com/watch?v=bTarX86gB5U" target="_blank" rel="noopener" aria-label="Assistir vídeo no canal TV-CFC">
+              ▶️ Assistir no YouTube
+            </a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="tooltip-container">
+          <a href="assets/mapa-reforma-mei.pdf" download class="materiais-link">
+            📊 Infográficos resumidos
+          </a>
+          <span class="tooltip">Baixe o Mapa da Reforma 2026 em 1 página. Grátis.</span>
+        </div>
+      </li>
     </ul>
-<!-- Botão YouTube com texto e ícone -->
-<div class="youtube-container">
-  <!-- Texto + logo à esquerda -->
-  <div class="youtube-info">
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 29 20" aria-hidden="true" class="youtube-icon">
-      <path d="M14.4848 20C14.4848 20 23.5695 20 25.8229 19.4C27.0917 19.06 28.0459 18.08 28.3808 16.87C29 14.65 29 9.98 29 9.98C29 9.98 29 5.34 28.3808 3.14C28.0459 1.9 27.0917 0.94 25.8229 0.61C23.5695 0 14.4848 0 14.4848 0C14.4848 0 5.42037 0 3.17711 0.61C1.9286 0.94 0.954148 1.9 0.59888 3.14C0 5.34 0 9.98 0 9.98C0 9.98 0 14.65 0.59888 16.87C0.954148 18.08 1.9286 19.06 3.17711 19.4C5.42037 20 14.4848 20 14.4848 20Z" fill="#FF0000"></path>
-      <path d="M19 10L11.5 5.75V14.25L19 10Z" fill="white"></path>
-    </svg>
-    Assistir vídeo no canal TV-CFC
-  </div>
-  <!-- Botão centralizado com símbolo ▶️ -->
-  <div class="youtube-link">
-    <a href="https://www.youtube.com/watch?v=bTarX86gB5U" target="_blank" aria-label="Assistir vídeo no canal TV-CFC">
-      ▶️ Assistir no YouTube
-    </a>
-  </div>
-</div>
+  </section>
+
+  <!-- =============================== MAPA - HTML =============================== -->
+  <section class="section" id="mapa">
+    <h2>📄 Mapa da Reforma 2026 em 1 Página</h2>
+    <p class="mapa-subtitulo">
+      Resolva sua dúvida em 3 cliques: Primeiro a fonte oficial, depois o resumo, por fim os detalhes.
+    </p>
+    <div class="tooltip-container mapa-btn-wrapper">
+      <a href="assets/FAQ_Reforma_Tributaria.pdf" target="_blank" class="btn-mapa btn-faq">
+        ❓ O que muda no SEU MEI? Ver FAQ Oficial Sebrae
+      </a>
+      <span class="tooltip">
+        Perguntas e Respostas direto da Agência Sebrae. 17 páginas. Atualizado 2025.
+      </span>
+    </div>
+    <div class="mapa-btn-wrapper">
+      <a href="assets/mapa-reforma-mei.pdf" download class="btn-mapa">
+        📥 Baixar Mapa da Reforma 2026 - Grátis em PDF
+      </a>
+      <p class="mapa-legenda">1 página. Salve no celular pra consultar depois.</p>
+    </div>
+    <div class="mapa-accordion">
+      <p class="mapa-cta">👇 Quer ver os números detalhados? Expanda abaixo:</p>
+      <details class="mapa-details">
+        <summary style="color: #2E8B57;">📊 Cenário 1: Continuar como MEI - Limite R$ 81.000/ano</summary>
+        <div class="mapa-details-content">
+          <p><strong>Impostos:</strong> Continua pagando só o DAS fixo. Sem IBS/CBS.</p>
+          <p><strong>Regra Nova:</strong> Se passar de R$ 81 mil, sai do MEI automático.</p>
+        </div>
+      </details>
+      <details class="mapa-details">
+        <summary style="color: #D97706;">⚠️ Cenário 2: Migrar para Simples Nacional</summary>
+        <div class="mapa-details-content">
+          <p><strong>Quando:</strong> Fatura acima de R$ 81 mil ou quer emitir NFe sem limite.</p>
+          <p><strong>Impostos:</strong> Vai pagar IBS + CBS dentro de uma alíquota única.</p>
+        </div>
+      </details>
+      <details class="mapa-details">
+        <summary style="color: #DC2626;">🚨 Cenário 3: Riscos de Ficar Ilegal</summary>
+        <div class="mapa-details-content">
+          <p><strong>Risco:</strong> Multa, cancelamento do CNPJ e perda de benefícios.</p>
+          <p><strong>Dica:</strong> Use a calculadora antes de decidir.</p>
+        </div>
+      </details>
+    </div>
   </section>
 
   <section class="section" id="agenda">
-    <h2><span>📅</span>Agenda de Oficinas</h2>
-    <ul>
+  <h2 class="tooltip-container">
+    <span>📅</span>Agenda de Oficinas
+    <span class="tooltip">🚧 Seção em desenvolvimento. Em breve as datas aqui.</span>
+  </h2>
+  <ul>
       <li>Oficinas mensais sobre ferramentas digitais.</li>
       <li>Palestras sobre ética e cidadania fiscal.</li>
       <li>Inscreva-se gratuitamente pelo formulário abaixo.</li>
     </ul>
   </section>
 
- <section class="section fade-in pesquisa" id="pesquisa">
-  <h2><span>📊</span> Pesquisa com Empreendedores</h2>
-  <p>
-    Sua opinião é essencial para entendermos como os empreendedores estão se preparando para a Reforma Tributária e como percebem a segurança jurídica no Brasil.
-  </p>
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSePwl8fW0wKnRzPjgYbWJZY4VX-EGriVzM76Zxz2ExbUcpcVQ/viewform?embedded=true"
-          class="iframe-pesquisa">
-    Carregando…
-  </iframe>
-</section>
+  <section class="section fade-in pesquisa" id="pesquisa">
+    <h2><span>📊</span> Pesquisa com Empreendedores</h2>
+    <p>
+      Sua opinião é essencial para entendermos como os empreendedores estão se preparando para a Reforma Tributária e como percebem a segurança jurídica no Brasil.
+    </p>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSePwl8fW0wKnRzPjgYbWJZY4VX-EGriVzM76Zxz2ExbUcpcVQ/viewform?embedded=true"
+            class="iframe-pesquisa">
+      Carregando…
+    </iframe>
+  </section>
 
   <section class="section" id="inscricao">
     <h2><span>📝</span>Inscrição nas Oficinas</h2>
     <form id="formInscricao">
       <label>Nome completo:</label>
       <input type="text" id="nome" name="nome" required>
-
       <label>E-mail:</label>
       <input type="email" id="email" name="email" required>
-
       <label>Área de interesse:</label>
       <select id="interesse" name="interesse" required>
         <option value="">Selecione...</option>
@@ -132,15 +213,12 @@
         <option value="Financeira">Educação Financeira</option>
         <option value="Ética">Ética Profissional</option>
       </select>
-
       <label>
         <input type="checkbox" id="consentimento" name="consentimento" value="Aceito" required>
         Declaro que concordo com o uso do meu e-mail e nome, para comunicação e inscrição conforme a LGPD.
       </label>
-
       <button type="submit">Enviar inscrição</button>
     </form>
-
     <div id="mensagemConfirmacao">
       <h2><span>✅</span> Inscrição Confirmada</h2>
       <p>Obrigado por se inscrever! Seus dados foram recebidos com sucesso.</p>
@@ -159,22 +237,22 @@
     <p>Espaço para relatórios reflexivos e publicação de resultados.</p>
   </section>
 
- <footer class="footer">
-  <div class="rodape-conteudo">
-    <span>© 2026 Projeto de Extensão - Universidade Parceira</span> |
-    <span>© 2026 Data4Max</span> |
-    <span><a href="privacidade.html">Política de Privacidade</a></span>
-  </div>
+  <footer class="footer">
+    <div class="rodape-conteudo">
+      <span>© 2026 Projeto de Extensão - Universidade Parceira</span> |
+      <span>© 2026 Data4Max</span> |
+      <span><a href="privacidade.html">Política de Privacidade</a></span>
+    </div>
   </footer>
 
   <!-- Aviso LGPD -->
-<div id="avisoLGPD" class="aviso-lgpd">
-  Este site utiliza cookies e coleta dados de navegação para fins estatísticos
-  (via Statcounter), conforme nossa <a href="privacidade.html">Política de Privacidade</a>.
-  Ao continuar navegando, você concorda com o uso dessas informações.
-  <button id="aceitarLGPD">Aceitar</button>
-</div>
+  <div id="avisoLGPD" class="aviso-lgpd">
+    Este site utiliza cookies e coleta dados de navegação para fins estatísticos
+    (via Statcounter), conforme nossa <a href="privacidade.html">Política de Privacidade</a>.
+    Ao continuar navegando, você concorda com o uso dessas informações.
+    <button id="aceitarLGPD">Aceitar</button>
+  </div>
 
-<script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
