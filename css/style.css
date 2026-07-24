@@ -594,38 +594,111 @@ p.tooltip-container {
   width: fit-content;
   margin: 0 auto;
 }
-/* Bloco Legal Footer - Isolado */
+/* ===============================
+   📌 Bloco Legal Footer - AJUSTE FINAL DA PRINT
+   =============================== */
+.footer {
+  background-color: #0A3D91;
+  padding-bottom: 16px;
+}
+
 .footer .legal-footer-wrap {
-  margin-top: 18px;
-  padding-top: 14px;
-  border-top: 1px solid var(--border-color, #e5e7eb);
+  margin-top: 14px;
+  padding: 0 16px; /* tirei padding de cima pra grudar na linha */
   text-align: center;
-  font-size: 11px;
-  line-height: 1.45;
-  color: var(--text-muted, #6b7280);
-  max-width: 820px;
+  font-size: 12px;
+  line-height: 1.5;
+  width: 100%;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
-  opacity: 0.85;
+  opacity: 1;
+  border-radius: 0;
 }
 
 .footer .legal-footer-wrap p {
-  margin: 3px 0;
+  margin: 4px auto;
+  max-width: 900px;
 }
 
-.footer .legal-footer-wrap strong,
+/* AJUSTE: Deixa sutil e com peso normal igual print */
+.footer .legal-footer-wrap strong {
+  font-weight: 600; /* semi-bold */
+  font-style: normal;
+  color: #A7D2FF; /* Azul claro */
+  opacity: 0.9; /* um pouco mais forte que o texto */
+}
 .footer .legal-footer-wrap em {
-  font-weight: 600;
-  color: var(--text-color, #111827);
+  font-weight: 400; /* normal igual o texto */
+  font-style: normal;
+  color: #FFFFFF;
+  opacity: 0.75; /* mais sutil igual "Disclaimer" da print */
+}
+.footer .legal-footer-wrap em strong { /* caso use <strong> dentro do disclaimer */
   opacity: 0.9;
 }
 
-/* Mobile: quebra melhor as leis longas */
+/* LINHA DIVISÓRIA PARCIAL */
+.footer .legal-footer-wrap::before {
+  content: "";
+  display: block;
+  width: 900px;
+  max-width: 90%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.35);
+  margin: 0 auto 10px auto;
+}
+
+/* ===== MODO CLARO ===== */
+body:not(.dark-mode) .footer { background-color: #0A3D91; }
+body:not(.dark-mode) .footer .legal-footer-wrap { background-color: transparent; color: #FFFFFF; }
+
+/* ===== MODO ESCURO ===== */
+body.dark-mode .footer { background-color: #08182F; }
+body.dark-mode .footer .legal-footer-wrap { background-color: transparent; color: #F8F9FA; }
+body.dark-mode .footer .legal-footer-wrap::before { background: rgba(255, 193, 7, 0.35); }
+
+/* ===============================
+   📌 HOVER SUAVE NO LINK AMARELO
+   =============================== */
+
+/* Estado normal do link */
+.footer .legal-footer-wrap a,
+.footer a[href*="politica"] { /* pega o link da Política mesmo se estiver fora do wrap */
+  color: #FFC107; /* Amarelo MEI */
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.25s ease; /* transição suave */
+  position: relative;
+}
+
+/* Estado hover - quando passa o mouse */
+.footer .legal-footer-wrap a:hover,
+.footer a[href*="politica"]:hover {
+  color: #FFD43B; /* Amarelo mais claro */
+  text-decoration: underline; /* sublinha aparece suave */
+  text-underline-offset: 3px; /* afasta um pouco a linha */
+}
+
+/* Estado active - quando clica */
+.footer .legal-footer-wrap a:active,
+.footer a[href*="politica"]:active {
+  color: #FFC107;
+  transform: translateY(1px); /* dá um "afundadinha" */
+}
+
+/* ===== MODO ESCURO: hover um pouco diferente ===== */
+body.dark-mode .footer .legal-footer-wrap a:hover,
+body.dark-mode .footer a[href*="politica"]:hover {
+  color: #FFE066; /* Amarelo ainda mais claro no dark */
+}
+
+/* Mobile */
 @media (max-width: 600px) {
   .footer .legal-footer-wrap {
-    font-size: 10.5px;
-    padding-left: 12px;
-    padding-right: 12px;
+    font-size: 11px;
+    padding: 0 12px;
+    max-width: 95%;
   }
 }
 
