@@ -603,16 +603,22 @@ p.tooltip-container {
   white-space: normal;
 }
 /* ===============================
-   📌 RODAPÉ - 2 VERSÕES
+   📌 RODAPÉ - 2 VERSÕES - FIX MOBILE
 =============================== */
 
-/* MODO CLARO - Azul chapado da print nova */
+/* TRAVA GERAL PRA NÃO ESTOURAR */
+html, body {
+  overflow-x: hidden !important;
+}
+
+/* MODO CLARO - Azul chapado */
 .footer {
   background-color: #0A3D91 !important;
   color: #fff !important;
   text-align: center !important;
-  padding: 18px 20px !important;
-  width: 100%;
+  padding: 18px 16px !important; /* diminui padding lateral no mobile */
+  width: 100% !important;
+  box-sizing: border-box !important; /* padding não estoura */
 }
 
 .footer .rodape-conteudo {
@@ -621,7 +627,10 @@ p.tooltip-container {
   gap: 8px 12px !important;
   font-size: 14px !important;
   margin-bottom: 10px !important;
-  flex-wrap: wrap;
+  flex-wrap: wrap !important;
+  max-width: 1200px !important; /* limita a largura */
+  margin: 0 auto 10px auto !important; /* centraliza */
+  word-wrap: break-word !important;
 }
 
 .footer .rodape-conteudo .separador {
@@ -639,27 +648,29 @@ p.tooltip-container {
   text-decoration: underline !important;
 }
 
-/* Bloco Legal */
+/* Bloco Legal - AQUI ESTAVA O BUG */
 .footer .legal-footer-wrap {
   font-size: 12.5px !important;
   line-height: 1.6 !important;
-  width: fit-content !important;
-  margin: 0 auto !important;
+  width: 100% !important; /* MUDEI: era fit-content */
+  max-width: 1200px !important; /* MUDEI: limita e centraliza */
+  margin: 15px auto 0 auto !important; /* MUDEI: espaço em cima */
+  padding: 15px 10px 0 10px !important; /* MUDEI: padding interno */
   text-align: center !important;
+  box-sizing: border-box !important;
+  
+  /* LINHA DIVISÓRIA VEM PRA CÁ */
+  border-top: 1px solid rgba(255, 255, 255, 0.35) !important;
 }
 
 .footer .legal-footer-wrap p {
   margin: 5px 0 !important;
+  word-wrap: break-word !important; /* quebra texto longo */
 }
 
-/* LINHA DIVISÓRIA */
+/* REMOVI O ::before - era ele que duplicava e estourava */
 .footer .legal-footer-wrap::before {
-  content: "" !important;
-  display: block !important;
-  width: 100% !important;
-  height: 1px !important;
-  background: rgba(255, 255, 255, 0.35) !important;
-  margin: 0 0 10px 0 !important;
+  content: none !important;
 }
 
 /* DESTAQUE AZUL CLARO */
@@ -669,14 +680,14 @@ p.tooltip-container {
 }
 
 /* =========================================
-   MODO ESCURO - DEGRADÊ VERDE DA PRINT ANTIGA
+   MODO ESCURO - DEGRADÊ VERDE
 ========================================= */
 body.dark-mode .footer {
-  background: linear-gradient(90deg, #0D1B2A, #1B4332) !important; /* Igual print */
+  background: linear-gradient(90deg, #0D1B2A, #1B4332) !important;
 }
 
-body.dark-mode .footer .legal-footer-wrap::before { 
-  background: rgba(255, 193, 7, 0.3) !important; /* Linha amarela */
+body.dark-mode .footer .legal-footer-wrap { 
+  border-top: 1px solid rgba(255, 193, 7, 0.3) !important; /* Linha amarela no dark */
 }
 
 body.dark-mode .footer .rodape-conteudo a:hover { 
@@ -684,7 +695,7 @@ body.dark-mode .footer .rodape-conteudo a:hover {
 }
 
 body.dark-mode .footer .legal-footer-wrap .label-destaque {
-  color: #A7D2FF !important; /* Mantém azul claro */
+  color: #A7D2FF !important;
 }
 /* ===============================
    📌 FAIXA PLAYLIST YOUTUBE - AJUSTE
