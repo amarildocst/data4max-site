@@ -115,7 +115,7 @@ nav.navbar {
 }
 
 .hero h1 {
-  font-size: clamp(2rem, 5vw, 3rem); /* 32px a 48px responsivo */
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 800;
   color: var(--accent-dark);
   line-height: 1.2;
@@ -130,7 +130,7 @@ nav.navbar {
   margin-inline: auto;
 }
 
-.hero.btn-cta {
+.btn-cta { /* CORRIGIDO: era.hero.btn-cta */
   display: inline-block;
   padding: 14px 28px;
   font-weight: 700;
@@ -142,18 +142,18 @@ nav.navbar {
   color: #fff;
   text-decoration: none;
   box-shadow: 0 4px 14px rgba(30, 58, 95, 0.3);
-  transition: transform.2s, box-shadow.2s, background.3s;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.3s; /* CORRIGIDO.2s */
 }
-.hero.btn-cta:hover {
+.btn-cta:hover {
   background: #0D1B2A;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(30, 58, 95, 0.4);
 }
-body.dark-mode.hero.btn-cta {
+body.dark-mode.btn-cta { /* CORRIGIDO */
   background-color: #FFD966;
   color: #1E1E1E;
 }
-body.dark-mode.hero.btn-cta:hover {
+body.dark-mode.btn-cta:hover {
   background-color: #e6c25e;
 }
 
@@ -169,21 +169,20 @@ body.dark-mode.hero.btn-cta:hover {
   justify-content: center;
   text-align: center;
 }
-.banner.overlay {
+.banner.overlay { /* CORRIGIDO: era.banner.overlay */
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
   background: rgba(255, 217, 102, 0.6);
 }
 .banner-content { position: relative; z-index: 2; }
-.banner h2 { /* Era h1, troquei pra não conflitar com SEO */
+.banner h2 {
   font-size: 2.8em;
   font-weight: 700;
   color: var(--accent-dark);
   text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 .banner p { font-size: 1.3em; margin-top: 10px; color: var(--accent-dark); }
-body.dark-mode.banner h2, body.dark-mode.banner p { color: #FFD966; }
 
 /* ===============================
    📌 Seções
@@ -240,28 +239,6 @@ form button:hover { background-color: #256d46; }
 #mensagemConfirmacao p { margin: 8px 0; font-size: 16px; }
 
 /* ===============================
-   📌 Rodapé
-=============================== */
-.footer {
-  background: #004080;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-}
-.rodape-conteudo {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  align-items: center;
-}
-.rodape-conteudo a {
-  color: #FFC107;
-  text-decoration: none;
-}
-.rodape-conteudo a:hover { text-decoration: underline; }
-
-/* ===============================
    📌 Animações
 =============================== */
 .fade-in {
@@ -275,18 +252,23 @@ form button:hover { background-color: #256d46; }
 }
 
 /* ===============================
-   🌙 Modo Escuro
+   🌙 Modo Escuro - UNIFICADO
 =============================== */
 body.dark-mode header,
-body.dark-mode footer {
+body.dark-mode.footer {
   background: linear-gradient(90deg, #0D1B2A, #1B4332);
 }
+body.dark-mode.footer { background-color: #08182F; } /* Override específico do footer */
+
 body.dark-mode nav { background-color: #1B4332; }
-body.dark-mode.menu a { color: #EAEAEA; }
+body.dark-mode.menu a { color: #EAEAEA; } /* CORRIGIDO */
 body.dark-mode.banner {
   background: url('../img/banner-dark.jpg') center/cover no-repeat;
 }
-body.dark-mode.banner.overlay { background: rgba(0,0,0,0.5); }
+body.dark-mode.banner.overlay { background: rgba(0,0,0,0.5); } /* CORRIGIDO */
+body.dark-mode.banner h2,
+body.dark-mode.banner p { color: #FFD966; }
+
 body.dark-mode.section {
   background-color: var(--bg-card);
   color: var(--text-main);
@@ -298,56 +280,48 @@ body.dark-mode #mensagemConfirmacao {
   border-color: #4CAF50;
   color: #EAEAEA;
 }
+body.dark-mode.footer.legal-footer-wrap { color: #F8F9FA; }
+body.dark-mode.footer.legal-footer-wrap::before { background: rgba(255, 193, 7, 0.35); }
+body.dark-mode.rodape-conteudo a:hover { color: #FFE066; }
+body.dark-mode.mapa-details { background: rgba(0,0,0,0.2); } /* CORRIGIDO */
 
-/* 🔹 Modo escuro automático */
-@media (prefers-color-scheme: dark) {
-  body:not(.light-mode) { background-color: #121212; color: #EAEAEA; }
-  body:not(.light-mode) header, body:not(.light-mode) footer { background: linear-gradient(90deg, #0D1B2A, #1B4332); }
-  body:not(.light-mode) nav { background-color: #1B4332; }
-  body:not(.light-mode).menu a { color: #EAEAEA; }
-  body:not(.light-mode).banner { background: url('../img/banner-dark.jpg') center/cover no-repeat; }
-  body:not(.light-mode).banner.overlay { background: rgba(0,0,0,0.5); }
-  body:not(.light-mode).banner h2, body:not(.light-mode).banner p { color: #FFD966; }
-  body:not(.light-mode).section {
-    background-color: #1E1E1E;
-    color: #EAEAEA;
-    box-shadow: 0 4px 10px rgba(255,255,255,0.1);
-  }
-  body:not(.light-mode) form button { background-color: #1B4332; }
-  body:not(.light-mode) #mensagemConfirmacao {
-    background-color: #1E1E1E;
-    border-color: #4CAF50;
-    color: #EAEAEA;
-  }
-}
+/* APAGADO: @media (prefers-color-scheme: dark) - Redundante com body.dark-mode */
 
 /* ===============================
    📌 Responsividade
 =============================== */
 @media (min-width: 769px) {
- .menu {
+.menu {
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 20px;
     flex: 1;
   }
- .menu-toggle { display: none; }
+.menu-toggle { display: none; }
 }
 @media (max-width: 768px) {
- .banner h2 { font-size: 2em; }
- .hero h1 { font-size: clamp(1.8rem, 8vw, 2.5rem); }
- .section { margin: 10px; padding: 20px; }
- .section h2 { font-size: 1.3em; }
- .iframe-pesquisa { min-height: 1200px; }
+.banner h2 { font-size: 2em; }
+.hero h1 { font-size: clamp(1.8rem, 8vw, 2.5rem); }
+.section { margin: 10px; padding: 20px; }
+.section h2 { font-size: 1.3em; }
+.iframe-pesquisa { min-height: 1200px; }
+}
+@media (max-width: 600px) {
+.youtube-container { flex-direction: column; align-items: flex-start; }
+.youtube-link { width: 100%; }
+.youtube-link a { display: block; text-align: center; width: 100%; }
+.playlist-banner { padding: 12px 14px; }
+.playlist-banner h3 { font-size: 15px; }
+.footer.legal-footer-wrap { font-size: 11px; padding: 0 12px; max-width: 95%; }
 }
 @media (max-width: 480px) {
- .banner { padding: 30px; }
- .banner h2 { font-size: 1.6em; }
- .hero { padding: 60px 20px 40px; }
- .section { margin: 5px; padding: 15px; }
- .menu a { font-size: 0.9em; }
- .iframe-pesquisa { min-height: 1600px; }
+.banner { padding: 30px; }
+.banner h2 { font-size: 1.6em; }
+.hero { padding: 60px 20px 40px; }
+.section { margin: 5px; padding: 15px; }
+.menu a { font-size: 0.9em; }
+.iframe-pesquisa { min-height: 1600px; }
 }
 
 /* ===============================
@@ -454,7 +428,6 @@ body.dark-mode #mensagemConfirmacao {
   padding: 10px 15px;
   border: 1px solid var(--border);
 }
-[data-theme="dark"].mapa-details { background: rgba(0,0,0,0.2); }
 
 .mapa-details summary {
   font-weight: bold;
@@ -483,7 +456,6 @@ body.dark-mode #mensagemConfirmacao {
 .materiais-titulo { font-weight: bold; color: var(--accent-dark); margin: 0 0 10px 0; font-size: 1.05em; }
 .materiais-video-wrapper { display: block; width: 100%; }
 
-/* 👇 O P já é block, mas o tooltip-container precisa ser inline-block */
 p.tooltip-container {
   display: inline-block;
   width: auto;
@@ -524,15 +496,8 @@ p.tooltip-container {
 }
 .youtube-link a:hover { background: #cc0000; }
 
-/* No celular empilha */
-@media (max-width: 600px) {
- .youtube-container { flex-direction: column; align-items: flex-start; }
- .youtube-link { width: 100%; }
- .youtube-link a { display: block; text-align: center; width: 100%; }
-}
-
 /* ===============================
-   📌 Tooltip Customizado v3 - Corrigido
+   📌 Tooltip Customizado
 =============================== */
 .tooltip-container {
   position: relative;
@@ -574,18 +539,20 @@ p.tooltip-container {
   border-color: var(--tooltip-bg) transparent;
 }
 
-.tooltip-container:hover .tooltip { /* 👈 Coloquei o espaço aqui */
+.tooltip-container:hover .tooltip { /* VOLTOU O ESPAÇO AQUI */
   visibility: visible;
   opacity: 1;
 }
+
 /* ===============================
    📌 AGENDA - Alinhado à esquerda
 =============================== */
 #agenda h2.tooltip-container {
-  display: inline-block; /* Só do tamanho do texto, não 100% */
+  display: inline-block;
   text-align: left;
-  margin: 0 0 15px 0; /* Tira o margin auto que centralizava */
+  margin: 0 0 15px 0;
  }
+
 /* ===============================
    📌 MAPA - Centralizado só aqui
 =============================== */
@@ -594,176 +561,23 @@ p.tooltip-container {
   width: fit-content;
   margin: 0 auto;
 }
-/* ===============================
-   📌 Bloco Legal Footer - AJUSTE FINAL DA PRINT
-   =============================== */
-.footer {
-  background-color: #0A3D91;
-  padding-bottom: 16px;
-}
-
-.footer .legal-footer-wrap {
-  margin-top: 14px;
-  padding: 0 16px; /* tirei padding de cima pra grudar na linha */
-  text-align: center;
-  font-size: 12px;
-  line-height: 1.5;
-  width: 100%;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  opacity: 1;
-  border-radius: 0;
-}
-
-.footer .legal-footer-wrap p {
-  margin: 4px auto;
-  max-width: 900px;
-}
-
-/* AJUSTE: Deixa sutil e com peso normal igual print */
-.footer .legal-footer-wrap strong {
-  font-weight: 600; /* semi-bold */
-  font-style: normal;
-  color: #A7D2FF; /* Azul claro */
-  opacity: 0.9; /* um pouco mais forte que o texto */
-}
-.footer .legal-footer-wrap em {
-  font-weight: 400; /* normal igual o texto */
-  font-style: normal;
-  color: #FFFFFF;
-  opacity: 0.75; /* mais sutil igual "Disclaimer" da print */
-}
-.footer .legal-footer-wrap em strong { /* caso use <strong> dentro do disclaimer */
-  opacity: 0.9;
-}
-
-/* LINHA DIVISÓRIA PARCIAL */
-.footer .legal-footer-wrap::before {
-  content: "";
-  display: block;
-  width: 900px;
-  max-width: 90%;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.35);
-  margin: 0 auto 10px auto;
-}
-
-/* ===== MODO CLARO ===== */
-body:not(.dark-mode) .footer { background-color: #0A3D91; }
-body:not(.dark-mode) .footer .legal-footer-wrap { background-color: transparent; color: #FFFFFF; }
-
-/* ===== MODO ESCURO ===== */
-body.dark-mode .footer { background-color: #08182F; }
-body.dark-mode .footer .legal-footer-wrap { background-color: transparent; color: #F8F9FA; }
-body.dark-mode .footer .legal-footer-wrap::before { background: rgba(255, 193, 7, 0.35); }
 
 /* ===============================
-   📌 HOVER SUAVE NO LINK AMARELO
-   =============================== */
-
-/* Estado normal do link */
-.footer .legal-footer-wrap a,
-.footer a[href*="politica"] { /* pega o link da Política mesmo se estiver fora do wrap */
-  color: #FFC107; /* Amarelo MEI */
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.25s ease; /* transição suave */
-  position: relative;
-}
-
-/* Estado hover - quando passa o mouse */
-.footer .legal-footer-wrap a:hover,
-.footer a[href*="politica"]:hover {
-  color: #FFD43B; /* Amarelo mais claro */
-  text-decoration: underline; /* sublinha aparece suave */
-  text-underline-offset: 3px; /* afasta um pouco a linha */
-}
-
-/* Estado active - quando clica */
-.footer .legal-footer-wrap a:active,
-.footer a[href*="politica"]:active {
-  color: #FFC107;
-  transform: translateY(1px); /* dá um "afundadinha" */
-}
-
-/* ===== MODO ESCURO: hover um pouco diferente ===== */
-body.dark-mode .footer .legal-footer-wrap a:hover,
-body.dark-mode .footer a[href*="politica"]:hover {
-  color: #FFE066; /* Amarelo ainda mais claro no dark */
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  .footer .legal-footer-wrap {
-    font-size: 11px;
-    padding: 0 12px;
-    max-width: 95%;
-  }
-}
-
-/* Faixa Playlist - Estilo SVG/Banner */
+   📌 Faixa Playlist - UNIFICADO
+=============================== */
 .playlist-banner {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-top: 28px;
+  margin-top: 24px;
   padding: 14px 18px;
-  background: #fff;
-  border: 1px solid var(--border-color, #e5e7eb);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
   border-radius: 12px;
   text-decoration: none;
   transition: all 0.2s ease;
   cursor: pointer;
-}
-
-.playlist-banner:hover {
-  border-color: #FF0000;
-  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.08);
-  transform: translateY(-2px);
-}
-
-.playlist-banner .yt-icon {
-  width: 28px;
-  height: 28px;
-  color: #FF0000;
-  flex-shrink: 0; /* Não esmaga o ícone no mobile */
-}
-
-.playlist-banner h3 {
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--text-color, #111827);
-  margin: 0;
-  line-height: 1.4;
-}
-
-/* Mobile: quebra pra 2 linhas se precisar */
-@media (max-width: 600px) {
-  .playlist-banner {
-    padding: 12px 14px;
-  }
-  .playlist-banner h3 {
-    font-size: 15px;
-  }
-}
-
-/* Remove o container antigo do youtube que estava estourando */
-.youtube-container { display: none; }
-
-/* Faixa Playlist - Estilo SVG/Banner */
-.playlist-banner {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 24px; /* Espaço depois da lista */
-  padding: 14px 18px;
-  background: #fff;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  box-sizing: border-box; /* Chave pra não vazar */
+  box-sizing: border-box;
   width: 100%;
 }
 
@@ -773,28 +587,143 @@ body.dark-mode .footer a[href*="politica"]:hover {
   transform: translateY(-2px);
 }
 
-.playlist-banner .yt-icon {
+.playlist-banner.yt-icon {
   width: 28px;
   height: 28px;
   color: #FF0000;
-  flex-shrink: 0; 
+  flex-shrink: 0;
 }
 
 .playlist-banner h3 {
   font-size: 16px;
   font-weight: 600;
-  color: #111827;
+  color: var(--text-main);
   margin: 0;
   line-height: 1.4;
-  white-space: normal; /* Permite quebrar linha no mobile */
+  white-space: normal;
+}
+/* ===============================
+   📌 RODAPÉ - 2 VERSÕES
+=============================== */
+
+/* MODO CLARO - Azul chapado da print nova */
+.footer {
+  background-color: #0A3D91 !important;
+  color: #fff !important;
+  text-align: center !important;
+  padding: 18px 20px !important;
+  width: 100%;
 }
 
-/* Mobile */
-@media (max-width: 600px) {
-  .playlist-banner {
-    padding: 12px 14px;
-  }
-  .playlist-banner h3 {
-    font-size: 15px;
-  }
+.footer .rodape-conteudo {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 8px 12px !important;
+  font-size: 14px !important;
+  margin-bottom: 10px !important;
+  flex-wrap: wrap;
+}
+
+.footer .rodape-conteudo .separador {
+  color: #fff !important;
+  opacity: 0.7 !important;
+}
+
+.footer .rodape-conteudo a {
+  color: #FFC107 !important; /* Amarelo */
+  text-decoration: none !important;
+  font-weight: 600 !important;
+}
+.footer .rodape-conteudo a:hover {
+  color: #FFD43B !important;
+  text-decoration: underline !important;
+}
+
+/* Bloco Legal */
+.footer .legal-footer-wrap {
+  font-size: 12.5px !important;
+  line-height: 1.6 !important;
+  width: fit-content !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+.footer .legal-footer-wrap p {
+  margin: 5px 0 !important;
+}
+
+/* LINHA DIVISÓRIA */
+.footer .legal-footer-wrap::before {
+  content: "" !important;
+  display: block !important;
+  width: 100% !important;
+  height: 1px !important;
+  background: rgba(255, 255, 255, 0.35) !important;
+  margin: 0 0 10px 0 !important;
+}
+
+/* DESTAQUE AZUL CLARO */
+.footer .legal-footer-wrap .label-destaque {
+  color: #A7D2FF !important;
+  font-weight: 600 !important;
+}
+
+/* =========================================
+   MODO ESCURO - DEGRADÊ VERDE DA PRINT ANTIGA
+========================================= */
+body.dark-mode .footer {
+  background: linear-gradient(90deg, #0D1B2A, #1B4332) !important; /* Igual print */
+}
+
+body.dark-mode .footer .legal-footer-wrap::before { 
+  background: rgba(255, 193, 7, 0.3) !important; /* Linha amarela */
+}
+
+body.dark-mode .footer .rodape-conteudo a:hover { 
+  color: #FFE066 !important; 
+}
+
+body.dark-mode .footer .legal-footer-wrap .label-destaque {
+  color: #A7D2FF !important; /* Mantém azul claro */
+}
+/* ===============================
+   📌 FAIXA PLAYLIST YOUTUBE - AJUSTE
+=============================== */
+.playlist-banner {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  background: linear-gradient(90deg, #FF0000, #CC0000) !important; /* Vermelho YT */
+  color: #fff !important;
+  text-decoration: none !important;
+  padding: 10px 16px !important;
+  border-radius: 8px !important;
+  margin-top: 20px !important;
+  font-weight: 600 !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.playlist-banner:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+}
+
+.playlist-banner h3 {
+  font-size: 15px !important;
+  margin: 0 !important;
+  color: #fff !important;
+}
+
+/* ÍCONE YOUTUBE PEQUENO E VERMELHO */
+.playlist-banner .yt-icon {
+  width: 20px !important;   /* Tamanho compacto */
+  height: 20px !important;
+  fill: #fff !important;    /* Branco dentro do fundo vermelho */
+  flex-shrink: 0 !important;
+}
+
+/* MODO ESCURO */
+body.dark-mode .playlist-banner {
+  background: linear-gradient(90deg, #FF0000, #A00000) !important;
 }
