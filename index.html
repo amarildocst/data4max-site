@@ -3,8 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reforma Tributária 2026: O que muda no SEU MEI? | Data4max</title>  
+  <title>Reforma Tributária 2026: O que muda no SEU MEI? | Data4max</title> 
+  
+  <!-- 1. PRÉ-CARREGAMENTO DE FONTES EXTERNAS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://i.ytimg.com" crossorigin>
+  <link rel="preconnect" href="https://www.youtube.com" crossorigin>
+  
+  <!-- 2. PRÉ-CARREGAR ARQUIVOS CRÍTICOS DO SEU SITE -->
+  <link rel="preload" href="css/style.css" as="style">
+  <link rel="preload" href="js/script.js" as="script">
+
+  <!-- 3. CARREGAR CSS NORMAL -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- 4. FAVICON -->
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
 
    <!-- Navegação com menu hamburguer e botão de tema -->
   <nav class="navbar">
@@ -238,19 +255,24 @@
   </section>
 
 
- <footer class="footer">
-    <div class="rodape-conteudo">
-      <span>© 2026 Projeto de Extensão - Universidade Parceira</span> |
-      <span>© 2026 Data4Max</span> |
-      <span><a href="privacidade.html">Política de Privacidade</a></span>
-    </div>
+<footer class="footer">
+  <div class="rodape-conteudo">
+    © 2026 Projeto de Extensão - Universidade Parceira <span class="separador">|</span> 
+    © 2026 Data4Max <span class="separador">|</span> 
+    <a href="privacidade.html">Política de Privacidade</a>
+  </div>
 
-    <!-- NOVO BLOCO LEGAL - Discreto -->
-    <div class="legal-footer-wrap">
-      <p><strong>Base Legal:</strong> Emenda Constitucional 132/2023 | Lei Complementar 214/2025 | Lei Complementar 123/2006 - Estatuto do MEI</p>
-      <p><em>Disclaimer:</em> Material educativo do Projeto de Extensão. Não substitui orientação contábil individual.</p>
-    </div>
-  </footer>
+  <div class="legal-footer-wrap">
+    <p>
+      <span class="label-destaque">Base Legal:</span>
+      <span class="texto-normal">Emenda Constitucional 132/2023 | Lei Complementar 214/2025 | Lei Complementar 123/2006 - Estatuto do MEI</span>
+    </p>
+    <p>
+      <span class="label-destaque">Disclaimer:</span>
+      <span class="texto-normal">Material educativo do Projeto de Extensão. Não substitui orientação contábil individual.</span>
+    </p>
+  </div>
+</footer>
 
   <!-- Aviso LGPD -->
   <div id="avisoLGPD" class="aviso-lgpd">
@@ -260,6 +282,7 @@
     <button id="aceitarLGPD">Aceitar</button>
   </div>
 
-  <script src="js/script.js"></script>
+  <!-- JS NÃO-BLOQUEANTE -->
+  <script src="js/script.js" defer></script>
 </body>
 </html>
