@@ -615,14 +615,14 @@ html, body {
   overflow-x: hidden !important;
 }
 
-/* MODO CLARO - Azul chapado */
+/* MODO CLARO - Azul Receita Federal */
 .footer {
-  background-color: #0A3D91 !important;
+  background-color: #003A6B !important; /* TROQUEI AQUI: era #0A3D91 */
   color: #fff !important;
   text-align: center !important;
-  padding: 18px 16px !important; /* diminui padding lateral no mobile */
+  padding: 18px 16px !important;
   width: 100% !important;
-  box-sizing: border-box !important; /* padding não estoura */
+  box-sizing: border-box !important;
 }
 
 .footer .rodape-conteudo {
@@ -632,8 +632,8 @@ html, body {
   font-size: 14px !important;
   margin-bottom: 10px !important;
   flex-wrap: wrap !important;
-  max-width: 1200px !important; /* limita a largura */
-  margin: 0 auto 10px auto !important; /* centraliza */
+  max-width: 1200px !important;
+  margin: 0 auto 10px auto !important;
   word-wrap: break-word !important;
 }
 
@@ -643,7 +643,7 @@ html, body {
 }
 
 .footer .rodape-conteudo a {
-  color: #FFC107 !important; /* Amarelo */
+  color: #FFC107 !important; /* Amarelo continua igual, combina com o azul */
   text-decoration: none !important;
   font-weight: 600 !important;
 }
@@ -652,34 +652,31 @@ html, body {
   text-decoration: underline !important;
 }
 
-/* Bloco Legal - AQUI ESTAVA O BUG */
+/* Bloco Legal */
 .footer .legal-footer-wrap {
   font-size: 12.5px !important;
   line-height: 1.6 !important;
-  width: 100% !important; /* MUDEI: era fit-content */
-  max-width: 1200px !important; /* MUDEI: limita e centraliza */
-  margin: 15px auto 0 auto !important; /* MUDEI: espaço em cima */
-  padding: 15px 10px 0 10px !important; /* MUDEI: padding interno */
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 15px auto 0 auto !important;
+  padding: 15px 10px 0 10px !important;
   text-align: center !important;
   box-sizing: border-box !important;
-  
-  /* LINHA DIVISÓRIA VEM PRA CÁ */
   border-top: 1px solid rgba(255, 255, 255, 0.35) !important;
 }
 
 .footer .legal-footer-wrap p {
   margin: 5px 0 !important;
-  word-wrap: break-word !important; /* quebra texto longo */
+  word-wrap: break-word !important;
 }
 
-/* REMOVI O ::before - era ele que duplicava e estourava */
 .footer .legal-footer-wrap::before {
   content: none !important;
 }
 
-/* DESTAQUE AZUL CLARO */
+/* DESTAQUE AZUL CLARO - já combina com o novo azul */
 .footer .legal-footer-wrap .label-destaque {
-  color: #A7D2FF !important;
+  color: #A7D2FF !important; /* Esse azul claro ficou perfeito com #003A6B */
   font-weight: 600 !important;
 }
 
