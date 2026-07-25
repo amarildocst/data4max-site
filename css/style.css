@@ -162,7 +162,11 @@ body.dark-mode.btn-cta:hover {
 =============================== */
 .banner {
   position: relative;
-  background: url('../img/banner-bg.jpg') center/cover no-repeat;
+  background-image: url('../img/banner-bg.webp?v=2'), url('../img/banner-bg.jpg?v=2');
+  background-position: center left; /* MUDOU DE center PRA center left */
+  background-size: cover;
+  background-repeat: no-repeat;
+  
   height: 70vh;
   display: flex;
   align-items: center;
